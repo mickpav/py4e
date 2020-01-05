@@ -1,45 +1,44 @@
-% Python for Everybody 
-% Exploring Data Using Python 3
+% Python для всех
+% Исследование данных с помощью Python 3
 % Charles R. Severance
 
-Why should you learn to write programs?
+
+Почему вам следует научиться писать программы?
 =======================================
 
-Writing programs (or programming) is a very creative and rewarding
-activity. You can write programs for many reasons, ranging from making
-your living to solving a difficult data analysis problem to having fun
-to helping someone else solve a problem. This book assumes that
-*everyone* needs to know how to program, and that once you know how to
-program you will figure out what you want to do with your newfound
-skills.
+Написание программ (или программирование) - это очень творческая и стоящая 
+усилий деятельность. Программы можно писать по многим причинам - 
+от зарабатывания на жизнь решением проблем с анализом данных до помощи к
+ому-либо еще в решении таких проблем. Данная книга подразумевает,
+что *каждому* необходимо знать как программировать и, однажды научившись,
+вы сможете найти применение вновь приобретенным навыкам.
 
-We are surrounded in our daily lives with computers ranging from laptops
-to cell phones. We can think of these computers as our "personal
-assistants" who can take care of many things on our behalf. The hardware
-in our current-day computers is essentially built to continuously ask us
-the question, "What would you like me to do next?"
+В нашей повседневной жизни мы окружены компьютерами, начиная от ноутбуков
+и заканчивая сотовыми телефонами. Мы рассматриваем все эти компьютеры как наши
+"персональные помощники", которые могут могут заботиться о многих вещах от 
+нашего имени. "Железо" наших компьютеров построено таким образом, что они 
+постоянно задают нам один вопрос: "Что бы вы хотели, чтобы я сделал дальше?"
 
 ![Personal Digital Assistant](height=1.0in@../images/pda)
 
-Programmers add an operating system and a set of applications to the
-hardware and we end up with a Personal Digital Assistant that is quite
-helpful and capable of helping us do many different things.
+Программисты добавляют операционную систему и набор приложений к "железу",
+в итоге мы получаем "персонального цифрового помощника", который весьма полезен
+и в состоянии помочь нам делать многие вещи.
 
-Our computers are fast and have vast amounts of memory and could be very
-helpful to us if we only knew the language to speak to explain to the
-computer what we would like it to "do next". If we knew this language,
-we could tell the computer to do tasks on our behalf that were
-repetitive. Interestingly, the kinds of things computers can do best are
-often the kinds of things that we humans find boring and mind-numbing.
+Наши компьютеры быстры, обладают большими объемами памяти и могут быть
+очень полезными для нас если бы мы только знали язык, с помощью которого
+можно объяснить компьютеру, что мы хотим "что делать дальше".  Если бы мы 
+знали этот язык, мы могли бы сказать компьютеру выполнять постоянно повторяющиеся 
+задания. Самое интересное, что компьютеры хороши именно в тех задачах, которые мы, люди,
+считаем скучными и отупляющими.
 
-For example, look at the first three paragraphs of this chapter and tell
-me the most commonly used word and how many times the word is used.
-While you were able to read and understand the words in a few seconds,
-counting them is almost painful because it is not the kind of problem
-that human minds are designed to solve. For a computer, the opposite is
-true, reading and understanding text from a piece of paper is hard for a
-computer to do but counting the words and telling you how many times the
-most used word was used is very easy for the computer:
+Для примера - взгляните на первые три абзаца данной главы и скажите мне, какое слово 
+было использовано чаще всех и сколько раз. В то время как вы в состоянии прочитать и
+понять смысл слов в течение нескольких секнуд, подсчет количества слов - весьма 
+болезненная процедура, так как это не та проблема, для решения которой создан 
+человеческий разум. Для компьютера наоборот - чтение и понимание текста с листа 
+бумаги, задача весьма трудная, но вот подсчитать слова и сказать сколько раз 
+использовалось самое часто употребляемое слово - задача очень легкая:
 
 ~~~~ {.python}
 python words.py
@@ -47,27 +46,26 @@ Enter file:words.txt
 to 16
 ~~~~
 
-Our "personal information analysis assistant" quickly told us that the
-word "to" was used sixteen times in the first three paragraphs of this
-chapter.
+Наш "персональный цифровой помощник" быстро скажет нам, что предлог "to" (речь идет об
+англоязычной версии текста) был использован 16 раз в первых трех абзацах данной главы.
 
-This very fact that computers are good at things that humans are not is
-why you need to become skilled at talking "computer language". Once you
-learn this new language, you can delegate mundane tasks to your partner
-(the computer), leaving more time for you to do the things that you are
-uniquely suited for. You bring creativity, intuition, and inventiveness
-to this partnership.
+И этот самый факт, что компьютеры хороши там, где люди не справляются и должен быть 
+причиной, почему вы должны уметь разговаривать на "компьютерном языке". Изучив
+этот новый язык, вы можете делегировать выполнение "мирских" задач своему партнеру
+(компьютеру), для того чтобы больше времени уделять вещам, для которых мы 
+больше всего приспособлены. Со своей стороны в данное партнерство вы привносите
+созидательность, интуицию и изобретательность.
 
-Creativity and motivation
+Созидательность и мотивация
 -------------------------
 
-While this book is not intended for professional programmers,
-professional programming can be a very rewarding job both financially
-and personally. Building useful, elegant, and clever programs for others
-to use is a very creative activity. Your computer or Personal Digital
-Assistant (PDA) usually contains many different programs from many
-different groups of programmers, each competing for your attention and
-interest. They try their best to meet your needs and give you a great
+В то время как данная книга не рассчитана для профессиональных программистов,
+профессиональное программирование может быть очень полезной работой как в 
+финансовом плане, так и в личном. Создание полезных, элегантных и умных программ
+для их использования другими людьми - очень созидательная деятельность. ваш компьютер
+или персональный цифровой помощник обычно содержит много различных программ, разаработанных
+разными группами программистов, соревнующихся за привлечение вашего внимания и интереса.
+They try their best to meet your needs and give you a great
 user experience in the process. In some situations, when you choose a
 piece of software, the programmers are directly compensated because of
 your choice.

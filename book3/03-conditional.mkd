@@ -1,7 +1,7 @@
 Conditional execution
 =====================
 
-Boolean expressions
+Булевы выражения
 -------------------
 
 \index{boolean expression}
@@ -63,7 +63,7 @@ Remember that `=` is an assignment operator and
 \index{comparison operator}
 \index{operator!comparison}
 
-Logical operators
+Логические операторы
 -----------------
 
 \index{logical operator}
@@ -104,7 +104,7 @@ This flexibility can be useful, but there are some subtleties to it that
 might be confusing. You might want to avoid it until you are sure you
 know what you are doing.
 
-Conditional execution
+Условное выполнение
 ---------------------
 
 \index{conditional statement}
@@ -187,7 +187,7 @@ SyntaxError: invalid syntax
 
 A blank line at the end of a block of statements is not necessary when writing and executing a script, but it may improve readability of your code.
 
-Alternative execution
+Альтернативное выполнение
 ---------------------
 
 \index{alternative execution}
@@ -265,7 +265,7 @@ checked, and so on. If one of them is true, the corresponding branch
 executes, and the statement ends. Even if more than one condition is
 true, only the first true branch executes.
 
-Nested conditionals
+Вложенные условия
 -------------------
 
 \index{nested conditional}
@@ -493,7 +493,7 @@ In the second expression, we say that `y != 0` acts as a
 *guard* to insure that we only execute `(x/y)`
 if `y` is non-zero.
 
-Debugging
+Отладка
 ---------
 
 \index{debugging}
@@ -531,7 +531,7 @@ on a previous line.
 In general, error messages tell you where the problem was discovered,
 but that is often not where it was caused.
 
-Glossary
+Глоссарий
 --------
 
 body
@@ -599,7 +599,7 @@ short circuit
     expression without needing to evaluate the rest of the expression.
 \index{short circuit}
 
-Exercises
+Упражнения
 ---------
 
 **Exercise 1: Rewrite your pay computation to give the employee 1.5 times

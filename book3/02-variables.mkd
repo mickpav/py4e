@@ -134,23 +134,23 @@ python
 
 \index{keyword}
 
-Programmers generally choose names for their variables that are
-meaningful and document what the variable is used for.
+В целом программисты выбирают для переменных значимые имена и документируют,
+для чего они используются.
 
-Variable names can be arbitrarily long. They can contain both letters
-and numbers, but they cannot start with a number. It is legal to use
-uppercase letters, but it is a good idea to begin variable names with a
-lowercase letter (you'll see why later).
+Имена переменных могут быть произвольной длины. Они могут содержать как символы, так и цифры, 
+но они не могут начинаться с цифры. Вполне нормальным считается использоваание заглавных букв,
+но хорошим тоном считается именование переменной с прописной буквы (почему, вы узнаете позже).
 
-The underscore character ( \_ ) can appear in a name. It is often used in
-names with multiple words, such as `my_name` or
-`airspeed_of_unladen_swallow`. Variable names can start with an
-underscore character, but we generally avoid doing this unless we are
-writing library code for others to use.
+Символ подчеркивания ( \_ ) может использоваться в имени переменной. Очень часто он используется
+в именах переменных, состоящих из нескольких слов, таких как `my_name` или
+`airspeed_of_unladen_swallow`. Имена переменных могут начинаться с символа подчеркивания, 
+но в основном мы стараемся этого избегать, если только не разрабатываем библиотеку, которой 
+будет пользоваться кто-то другой.
 
 \index{underscore character}
 
-If you give a variable an illegal name, you get a syntax error:
+Если вы попытаетесь присвоить переменной некорректное имя, 
+вы получите синтаксическую ошибку:
 
 ~~~~ {.python .trinket height="450"}
 >>> 76trombones = 'big parade'
@@ -161,17 +161,17 @@ SyntaxError: invalid syntax
 SyntaxError: invalid syntax
 ~~~~
 
-`76trombones` is illegal because it begins with a number.
-`more@` is illegal because it contains an illegal character,
-@. But what's wrong with `class`?
+`76trombones`  - некорректное имя, так как начианется с цифры.
+`more@`  - являтеся также некорректным, так как содержит недопустимый 
+символ - @. А что не так с именем `class`?
 
-It turns out that `class` is one of Python's
-*keywords*. The interpreter uses keywords to recognize
-the structure of the program, and they cannot be used as variable names.
+На самом деле `class` - это одно из *ключевых* слов языка Python.
+Интерпретатор использует ключевые слова для распознавания структуры программы
+и поэтому их нельзя использовать в качестве имен переменных.
 
 \index{keyword}
 
-Python reserves 35 keywords:
+В языке Python зарезервировано 35 ключевых слов:
 
 ~~~~
 and       del       from      None      True
@@ -183,29 +183,27 @@ continue  finally   is        raise     async
 def       for       lambda    return    await
 ~~~~
 
-You might want to keep this list handy. If the interpreter complains
-about one of your variable names and you don't know why, see if it is on
-this list.
+Возможно, вам захочется держать этот список под рукой. Если интерпретатор
+Python жалуется на одно из имен переменных и вы не знаете почему, посмотрите,
+может быть оно из этого списка?
 
-Statements
+Команды
 ----------
 
-A *statement* is a unit of code that the Python
-interpreter can execute. We have seen two kinds of statements: print being
-an expression statement and assignment.
+*Команда* - фрагмент кода, который может выполнить интерепретатор Python. 
+Мы уже видели два типа команд: вывод значения выражения и присваивание.
 
 \index{statement}
 \index{interactive mode}
 \index{script mode}
 
-When you type a statement in interactive mode, the interpreter executes
-it and displays the result, if there is one.
+Если вы вводите команду в интерактивном режиме, интерпретатор исполняет ее
+и выводит результат (если он есть).
 
-A script usually contains a sequence of statements. If there is more
-than one statement, the results appear one at a time as the statements
-execute.
+Скрипт обычно содержит последовательность команд. Если их больше, чем одна, результаты выводятся 
+один за другим по мере исполнения.
 
-For example, the script
+Например, следующая программа
 
 ~~~~ {.python}
 print(1)
@@ -213,16 +211,16 @@ x = 2
 print(x)
 ~~~~
 
-produces the output
+выведет следующее:
 
 ~~~~
 1
 2
 ~~~~
 
-The assignment statement produces no output.
+Оператор присваивания не выводит ничего на экран.
 
-Operators and operands
+Операторы и операнды
 ----------------------
 
 \index{operator, arithmetic}
@@ -230,13 +228,12 @@ Operators and operands
 \index{operand}
 \index{expression}
 
-*Operators* are special symbols that represent
-computations like addition and multiplication. The values the operator
-is applied to are called *operands*.
+*Операторами* являются специальные символы, которые использубтся для организации вычислений, таких как 
+сложение или умножени. Значения, к которым применяются операторы, называются *операнды*. 
 
-The operators `+`, `-`, `*`, `/`, and
-`**` perform addition, subtraction, multiplication, division,
-and exponentiation, as in the following examples:
+Операторы `+`, `-`, `*`, `/`, и
+`**` выполняют сложение, вычитание, умножение, деление и возведение в степень, 
+как показано в следующих примерах:
 
 ~~~~ {.python}
 20+32
@@ -247,9 +244,8 @@ minute/60
 (5+9)*(15-7)
 ~~~~
 
-There has been a change in the division operator between Python 2.x
-and Python 3.x.  In Python 3.x, the result of this division is a
-floating point result:
+В версиях Python 2.х и 3.х существуют различия при использовании оператора деления.  
+В Python 3.x, результатом деления всегда будет вещественное число:
 
 ~~~~ {.python .trinket height="160"}
 >>> minute = 59
@@ -257,8 +253,7 @@ floating point result:
 0.9833333333333333
 ~~~~
 
-The division operator in Python 2.0 would divide two integers and 
-truncate the result to an integer:
+Оператор деления в Python 2.0 делит два целых числа и результат преобразует в целое: 
 
 ~~~~ {.python}
 >>> minute = 59
@@ -266,7 +261,7 @@ truncate the result to an integer:
 0
 ~~~~
 
-To obtain the same answer in Python 3.0 use floored ( `//` integer) division.
+Чтобы получить такой же результат в  Python 3.х, необходимо использовать целочисленное деление ( `//` ) .
 
 ~~~~ {.python .trinket  height="160"}
 >>> minute = 59
@@ -282,13 +277,12 @@ if you entered the expression on a calculator.
 \index{floating-point division}
 \index{division!floating-point}
 
-Expressions
+Выражения
 -----------
 
-An *expression* is a combination of values, variables,
-and operators. A value all by itself is considered an expression, and so
-is a variable, so the following are all legal expressions (assuming that
-the variable `x` has been assigned a value):
+*Выражение* - это комбинация значений, переменных и операторов. Значение само по
+себе считается выражением, то же самое относится к переменным, соответственно, следующие
+записи будут являться корректными выражениями (предположим, что переменной `x` было присвоено значение):
 
 \index{expression}
 \index{evaluate}
@@ -299,20 +293,18 @@ x
 x + 17
 ~~~~
 
-If you type an expression in interactive mode, the interpreter
-*evaluates* it and displays the result:
+Если вы введете выражение в интерактивном режиме, интерпретатор *обработает* его и 
+выведет результат:
 
 ~~~~ {.python}
 >>> 1 + 1
 2
 ~~~~
 
-But in a script, an expression all by itself doesn't do anything! This
-is a common source of confusion for beginners.
+Но в скрипте выражение само по себе ничего не делает! Это является очень частой причиной путаницы у
+начинающих.
 
-
-**Exercise 1: Type the following statements in the Python interpreter to
-see what they do:**
+**Упражнение 1: Наберите следующие команды в интерпретаторе Python и посмотрите на результат их выполнения:**
 
 ~~~~ {.python}
 5
@@ -320,27 +312,26 @@ x = 5
 x + 1
 ~~~~
 
-Order of operations
+Порядок операций
 -------------------
 
 \index{order of operations}
 \index{rules of precedence}
 \index{PEMDAS}
 
-When more than one operator appears in an expression, the order of
-evaluation depends on the *rules of precedence*. For
-mathematical operators, Python follows mathematical convention. The
-acronym *PEMDAS* is a useful way to remember the rules:
+Когла в одном выражении встречается более, чем один оператор, порядок обработки
+строится в соответствии с *правилами приоритета*. 
+Для математических операторов Python следует математическим соглашениям. Для того, 
+чтобы запомнить эти правила используется сокращение *PEMDAS* (актуально для 
+англоязычной версии):
 
 \index{parentheses!overriding precedence}
 
--   *P*arentheses have the highest precedence and can be
-    used to force an expression to evaluate in the order you want. Since
-    expressions in parentheses are evaluated first, `2 *
-    (3-1)` is 4, and `(1+1)**(5-2)` is 8. You can
-    also use parentheses to make an expression easier to read, as in
-    `(minute * 100) / 60`, even if it doesn't change the
-    result.
+-   *С*кобки имеют самый высокий приоритет и могут быть использованы для того, 
+чтобы полностью изменить порядок вычисления выражения. Так как выражения в скобках
+обрабатываются в первую очередь, `2 * (3-1)` будет равно 4, и  `(1+1)**(5-2)` будет равно 8. 
+Также вы можете использовать скобки для того, чтобы улучшить читабельность, например
+`(minute * 100) / 60`, даже есали это не влияет на конечный результат.
 
 -   *E*xponentiation has the next highest precedence, so
     `2**1+1` is 3, not 4, and `3*1**3` is 3,

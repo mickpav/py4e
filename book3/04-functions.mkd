@@ -1,8 +1,8 @@
 
-Functions
+Функции
 =========
 
-Function calls
+Вызовы функций
 --------------
 
 \index{function call}
@@ -32,7 +32,7 @@ result. The result is called the *return value*.
 \index{argument}
 \index{return value}
 
-Built-in functions
+Встроенные функции
 ------------------
 
 Python provides a number of important built-in functions that we can use
@@ -73,7 +73,7 @@ on any set of values, as we will see in later chapters.
 You should treat the names of built-in functions as reserved words
 (i.e., avoid using "max" as a variable name).
 
-Type conversion functions
+Функции преобразования типов
 -------------------------
 
 \index{conversion!type}
@@ -128,7 +128,7 @@ Finally, `str` converts its argument to a string:
 '3.14159'
 ~~~~
 
-Math functions
+Математические функции
 --------------
 
 \index{math function}
@@ -209,7 +209,7 @@ comparing it to the square root of two divided by two:
 0.7071067811865476
 ~~~~
 
-Random numbers
+Случайные числа
 --------------
 
 \index{random number}
@@ -306,7 +306,7 @@ The `random` module also provides functions to generate
 random values from continuous distributions including Gaussian,
 exponential, gamma, and a few more.
 
-Adding new functions
+Добавление новых функций
 --------------------
 
 So far, we have only been using the functions that come with Python, but
@@ -417,7 +417,7 @@ I sleep all night and I work all day.
 
 But that's not really how the song goes.
 
-Definitions and uses
+Определения и использование
 --------------------
 
 \index{function definition}
@@ -482,7 +482,7 @@ What's the moral of this sordid tale? When you read a program, you don't
 always want to read from top to bottom. Sometimes it makes more sense if
 you follow the flow of execution.
 
-Parameters and arguments
+Параметры и аргументы
 ------------------------
 
 \index{parameter}
@@ -645,7 +645,7 @@ of the two numbers and placed it in the local function variable named
 send the computed value back to the calling code as the function result,
 which was assigned to the variable `x` and printed out.
 
-Why functions?
+Зачем использовать функции?
 --------------
 
 \index{function, reasons for}
@@ -674,7 +674,7 @@ finds the smallest in a list of values and we will present it to you as
 a function named `min` which takes a list of values as its
 argument and returns the smallest value in the list.
 
-Debugging
+Отладка
 ---------
 
 \index{debugging}
@@ -702,7 +702,7 @@ If you're not sure, put something like `print("hello")` at the beginning
 of the program and run it again. If you don't see `hello`, you're not
 running the right program!
 
-Glossary
+Глоссарий
 --------
 
 algorithm
@@ -795,7 +795,7 @@ void function
 :   A function that does not return a value.
 \index{void function}
 
-Exercises
+Упражнения
 ---------
 
 **Exercise 4: What is the purpose of the "def" keyword in Python?**

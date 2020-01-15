@@ -1,37 +1,34 @@
 
-Iteration
+Итерация
 =========
 
 \index{iteration}
 
-Updating variables
+Обновление значений переменных
 ------------------
 
 \index{update}
 \index{variable!updating}
 
-A common pattern in assignment statements is an assignment statement
-that updates a variable, where the new value of the variable depends on
-the old.
+Одним из общих паттернов в выражениях присваивания - присваивание, которое обновляет значение переменной,
+причем новое значение зависит от старого.
 
 ~~~~ {.python}
 x = x + 1
 ~~~~
 
-This means "get the current value of `x`, add 1, and then
-update `x` with the new value."
+Это означает: "получить текущее значение `x`, прибавить к нему  1, затем поместить в  `x` 
+новое значение."
 
-If you try to update a variable that doesn't exist, you get an error,
-because Python evaluates the right side before it assigns a value to
-`x`:
+Если вы попытаетесь обновить переменную, которой не существует, вы получите сообщенеи об ошибке,
+так Python обрабатывает правую часть присваивания перед присваиванием значения `x`:
 
 ~~~~ {.python}
 >>> x = x + 1
 NameError: name 'x' is not defined
 ~~~~
 
-Before you can update a variable, you have to
-*initialize* it, usually with a simple assignment:
+Перд тем, как менять значение переменной, ее необходимо *инициализировать*, обычно это делается присваиванием:
 
 \index{initialization (before update)}
 
@@ -40,13 +37,13 @@ Before you can update a variable, you have to
 >>> x = x + 1
 ~~~~
 
-Updating a variable by adding 1 is called an *increment*;
-subtracting 1 is called a *decrement*.
+Увеличение значения переменной на 1 называется *инкремент*;
+уменьшение на 1 называется *декремент*.
 
 \index{increment}
 \index{decrement}
 
-The `while` statement
+Оператор `while` 
 --------------------------------
 
 \index{statement!while}

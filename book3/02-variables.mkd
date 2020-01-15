@@ -506,39 +506,39 @@ percentage = (minute * 100) / 60
 percentage = (minute * 100) / 60     # percentage of an hour
 ~~~~
 
-Everything from the `#` to the end of the line is ignored; it
-has no effect on the program.
+Начиная с символа `#` и до конца строки содержимое игнорируется и не имеет никакого влияния на исполнение программы.
 
-Comments are most useful when they document non-obvious features of the
-code. It is reasonable to assume that the reader can figure out *what*
-the code does; it is much more useful to explain *why*.
+Комментарии особенно полезны, когда они поясняют не совсем очевидные фрагменты кода. 
+Хорошим тоном считается такой комментарий, который позволяет понять *что* делает код. Это гораздо 
+лучше пояснений *почему*.
 
-This comment is redundant with the code and useless:
-
-~~~~ {.python}
-v = 5     # assign 5 to v
-~~~~
-
-This comment contains useful information that is not in the code:
+Ниже приведенный комментарий является избыточным и бесполезным:
 
 ~~~~ {.python}
-v = 5     # velocity in meters/second.
+v = 5     # присвоение v значения 5
 ~~~~
 
-Good variable names can reduce the need for comments, but long names can
-make complex expressions hard to read, so there is a trade-off.
+А этот комментарий содержит полезную информацию, ко                 торой нет в коде:
 
-Choosing mnemonic variable names
+~~~~ {.python}
+v = 5     # скорость в м/с
+~~~~
+
+Хорошо выбранные имена для переменных могут несколько убавить необходимость в комментариях,
+но, в свою очередь, длинные имена могут затруднить восприятие сложных выражений. 
+Поэтому всегда должен быть компромисс
+
+Выбор мнемонических имен дял переменных
 --------------------------------
 
 \index{mnemonic}
 
-As long as you follow the simple rules of variable naming, and avoid
-reserved words, you have a lot of choice when you name your variables.
-In the beginning, this choice can be confusing both when you read a
-program and when you write your own programs. For example, the following
-three programs are identical in terms of what they accomplish, but very
-different when you read them and try to understand them.
+При условии соблюдения простых правил именования переменных и избегании использования 
+зарезервированных слов, у вас есть большой выбор как называть свои переменные.
+В самом начале такой выбор может вводить в заблуждение как при чтеии исходного кода, таки при написании
+собственных программ. 
+Например, следующие три программы идентичны в плане результатов выполнения, но очень сильно различаются в плане 
+понимания структуры и выполняемых функций.
 
 ~~~~ {.python}
 a = 35.0
@@ -561,12 +561,10 @@ x1q3p9afd = x1q3z9ahd * x1q3z9afd
 print(x1q3p9afd)
 ~~~~
 
-The Python interpreter sees all three of these programs as *exactly the
-same* but humans see and understand these programs quite differently.
-Humans will most quickly understand the *intent* of the
-second program because the programmer has chosen variable names that
-reflect their intent regarding what data will be stored in each
-variable.
+Интерпретатор Python расценит все три программы как *абсолютно одинаковые*, но люди
+будут воспримнимать их совершенно по-разному.
+Для человека быстрее всего будет понятно *намерение* второй программы, поскольку программист
+выбрал такие имена переменных, которые отражают данные, хранящиеся в них.
 
 We call these wisely chosen variable names "mnemonic variable names".
 The word *mnemonic*^[See <https://en.wikipedia.org/wiki/Mnemonic> for an extended
@@ -634,7 +632,7 @@ clues to keep your variables and reserved words separate. After a while
 you will begin to read Python and quickly determine what is a variable
 and what is a reserved word.
 
-Debugging
+Отладка
 ---------
 
 \index{debugging}

@@ -1,4 +1,4 @@
-Files
+Файлы
 =====
 
 \index{file}
@@ -35,7 +35,7 @@ we create in a text editor. Later we will see how to work with database
 files which are binary files, specifically designed to be read and
 written through database software.
 
-Opening files
+Открытие файлов
 -------------
 
 \index{file!open}
@@ -81,7 +81,7 @@ Later we will use `try` and `except` to deal more
 gracefully with the situation where we attempt to open a file that does
 not exist.
 
-Text files and lines
+Текстовые файлы и строки
 --------------------
 
 A text file can be thought of as a sequence of lines, much like a Python
@@ -151,7 +151,7 @@ line that marks the end of the line.
 So the newline character separates the characters in the file into
 lines.
 
-Reading files
+Чтение файлов
 -------------
 
 \index{file!reading}
@@ -227,7 +227,7 @@ if the file data will fit comfortably in the main memory of your computer.
 If the file is too large to fit in main memory, you should write your
 program to read the file in chunks using a `for` or `while` loop.
 
-Searching through a file
+Поиск в файле
 ------------------------
 
 When you are searching through data in a file, it is a very common
@@ -344,7 +344,7 @@ where we put the `continue ` on the same line as the
 the same as if the `continue` were on the next line and
 indented.
 
-Letting the user choose the file name
+Запрос имени файла у пользователя
 -------------------------------------
 
 We really do not want to have to edit our Python code every time we want
@@ -380,7 +380,7 @@ friendly user do that would cause our nice little program to
 ungracefully exit with a traceback, making us look not-so-cool in the
 eyes of our users?"
 
-Using `try, except,` and `open`
+Использование  `try, except,` и `open`
 -----------------------------------------------------
 
 I told you not to peek. This is your last chance.
@@ -463,7 +463,7 @@ the notion that programming is part engineering and part art. We are not
 always interested in just making something work, we also want our
 solution to be elegant and to be appreciated as elegant by our peers.
 
-Writing files
+Запись файлов
 -------------
 
 \index{file!writing}
@@ -524,7 +524,7 @@ nothing to chance.
 \index{close method}
 \index{method!close}
 
-Debugging
+Отладка
 ---------
 
 \index{debugging}
@@ -569,7 +569,7 @@ another. You can find them (and read more about this issue) at
 [wikipedia.org/wiki/Newline](wikipedia.org/wiki/Newline). Or, of course,
 you could write one yourself.
 
-Glossary
+Глоссарий
 --------
 
 catch
@@ -599,7 +599,7 @@ text file
     drive.
 \index{text file}
 
-Exercises
+Упражнения
 ---------
 
 **Exercise 1: Write a program to read through a file and print the

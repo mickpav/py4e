@@ -1,7 +1,7 @@
-Strings
+Строки
 =======
 
-A string is a sequence
+Строка - это последовательность
 ----------------------
 
 \index{sequence}
@@ -9,8 +9,8 @@ A string is a sequence
 \index{bracket operator}
 \index{operator!bracket}
 
-A string is a *sequence* of characters. You can access
-the characters one at a time with the bracket operator:
+Строка - это *последовательность* символов. Вы можете полчить доступ 
+к каждому символу с посощью квадртаных скобок:
 
 ~~~~ {.python}
 >>> fruit = 'banana'
@@ -20,24 +20,22 @@ the characters one at a time with the bracket operator:
 \index{index}
 \index{}
 
-The second statement extracts the character at index position 1 from the
-`fruit` variable and assigns it to the `letter`
-variable.
+Второе выражение извлекает из строки символ, стоящий на позиции 1 из переменной `fruit` и 
+присваивает его переменной `letter`.
 
-The expression in brackets is called an *index*. The
-index indicates which character in the sequence you want (hence the
-name).
+Выражение в квадратных скобках называется *индексом*. Индекс показывает позицию
+определенного символа в строковой последовательности.
 
-But you might not get what you expect:
+Однако результатом будет совсем не то, что вы ожидали:
 
 ~~~~ {.python}
 >>> print(letter)
 a
 ~~~~
 
-For most people, the first letter of "banana" is "b", not
-"a". But in Python, the index is an offset from the beginning
-of the string, and the offset of the first letter is zero.
+Для всех людей очевидно, что  первая буква слова "banana" это "b", не 
+"a". Но в  Python, индекс является смещением от начала строки, поэтому 
+индекс первой буквы будет равен 0.
 
 ~~~~ {.python}
 >>> letter = fruit[0]
@@ -45,18 +43,17 @@ of the string, and the offset of the first letter is zero.
 b
 ~~~~
 
-So "b" is the 0th letter ("zero-th") of "banana",
-"a" is the 1th letter ("one-th"), and "n" is the
-2th ("two-th") letter.
+Итак, "b" будет 0 буквой в слове "banana",
+"a" будет первой буквой и  "n"  - второй буквой.
 
 ![String Indexes](height=0.75in@../images/string)
 
 \index{index!starting at zero}
 \index{zero, index starting at}
 
-You can use any expression, including variables and operators, as an
-index, but the value of the index has to be an integer. Otherwise you
-get:
+В качестве индекса может использоваться любое выражение, включая 
+переменные, операторы в качестве индекса, но значением индекса 
+всегда должно быть целое число. В ином случае у вас получится:
 
 \index{index}
 \index{}
@@ -68,14 +65,13 @@ get:
 TypeError: string indices must be integers
 ~~~~
 
-Getting the length of a string using `len`
+Вычисление длины строки с попощью функции `len`
 -----------------------------------------------------
 
 \index{len function}
 \index{function!len}
 
-`len` is a built-in function that returns the number of
-characters in a string:
+`len` является встроенной функцией, которая возвращает колчиество символов в строке:
 
 ~~~~ {.python}
 >>> fruit = 'banana'
@@ -83,8 +79,7 @@ characters in a string:
 6
 ~~~~
 
-To get the last letter of a string, you might be tempted to try
-something like this:
+Чтобы получить последний символ в строке вы можете попробовать следующий код:
 
 \index{exception!IndexError}
 \index{IndexError}
@@ -95,10 +90,9 @@ something like this:
 IndexError: string index out of range
 ~~~~
 
-The reason for the `IndexError` is that there is no letter in
-"banana" with the index 6. Since we started counting at
-zero, the six letters are numbered 0 to 5. To get the last character,
-you have to subtract 1 from `length`:
+Причиной ошибки `IndexError` является то, что в слове "banana"  нет символа с индексом 6. 
+Так как индексы считаются с 0, то 6 букв будут нумероваться от 0 до 5. 
+Таким образом, чтобы получить последний символ, вам необходимо отнять 1 от `length`:
 
 ~~~~ {.python}
 >>> last = fruit[length-1]
@@ -106,15 +100,14 @@ you have to subtract 1 from `length`:
 a
 ~~~~
 
-Alternatively, you can use negative indices, which count backward from
-the end of the string. The expression `fruit[-1]` yields the
-last letter, `fruit[-2]` yields the second to last, and so
-on.
+В качестве альтернативы можно использовать негативные индексы, в таком случае отсчет 
+ведется с конца строки. Выражение `fruit[-1]` вернет последний символ, `fruit[-2]` 
+вернет предпоследний  и так далее.
 
 \index{index!negative}
 \index{negative index}
 
-Traversal through a string with a loop
+Перебор строки с посощью цикла
 --------------------------------------
 
 \index{traversal}

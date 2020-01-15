@@ -9,10 +9,9 @@ Conditional execution
 \index{logical operator}
 \index{operator!logical}
 
-A *boolean expression* is an expression that is either
-true or false. The following examples use the operator `==`,
-which compares two operands and produces `True` if they are
-equal and `False` otherwise:
+*Булево выражение* это выражение, результатом которого могут быть только значения "ложь" или "истина".
+В следующих примерах используется оператор `==`, который сравнивает два операнда и выдает `True` если 
+они равны и `False` в противном случае:
 
 ~~~~ {.python .trinket}
 >>> 5 == 5
@@ -22,8 +21,7 @@ False
 {}
 ~~~~
 
-`True` and `False` are special values that belong
-to the class `bool`; they are not strings:
+`True` и `False` являются специальными значениями, которые принадлежат к классу  `bool`; они не являются строками:
 
 \index{True special value}
 \index{False special value}

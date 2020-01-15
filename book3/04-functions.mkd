@@ -7,27 +7,24 @@
 
 \index{function call}
 
-In the context of programming, a *function* is a named
-sequence of statements that performs a computation. When you define a
-function, you specify the name and the sequence of statements. Later,
-you can "call" the function by name. We have already seen one example of
-a *function call*:
+В контексте программирования *функция*  - это именованная последовательность операторов,
+выполняющая какие-либо действия. Когда вы определяете функцию, вы указываете ее имя и
+последовательность операторов. Позже вы можете "вызывать" функцию по ее имени. 
+Мы уже встречались с примерами *вызова функции*:
 
 ~~~~ {.python}
 >>> type(32)
 <class 'int'>
 ~~~~
 
-The name of the function is `type`. The expression in
-parentheses is called the *argument* of the function. The
-argument is a value or variable that we are passing into the function as
-input to the function. The result, for the `type` function,
-is the type of the argument.
+Имя функции -  `type`. Выражение в скобках называется *аргументом* функции.
+Аргумент - это значение или переменная, которые передаются на вход функции.
+Результатом работы функции `type` будет являться вывод типа аргумента.
 
 \index{parentheses!argument in}
 
-It is common to say that a function "takes" an argument and "returns" a
-result. The result is called the *return value*.
+Принято говорить, что функция "принимает" аргумент и "возвращает" результат.
+Результат назывется *возвращаемым значением*.
 
 \index{argument}
 \index{return value}
@@ -35,13 +32,11 @@ result. The result is called the *return value*.
 Встроенные функции
 ------------------
 
-Python provides a number of important built-in functions that we can use
-without needing to provide the function definition. The creators of
-Python wrote a set of functions to solve common problems and included
-them in Python for us to use.
+Python обладает набором важных встроенных функций, которые мы можем использовать
+без необходимости их определения. Создатели Python написали набор функций для 
+решения типовых проблем и включили их в Python, чтобы мы могли ими пользоваться.
 
-The `max` and `min` functions give us the largest
-and smallest values in a list, respectively:
+Функции `max` и `min` возвращают мкксимальный и минимальный элементы в списке:
 
 ~~~~ {.python}
 >>> max('Hello world')
@@ -51,15 +46,11 @@ and smallest values in a list, respectively:
 >>>
 ~~~~
 
-The `max` function tells us the "largest character" in the
-string (which turns out to be the letter "w") and the `min`
-function shows us the smallest character (which turns out to be a
-space).
+Функция `max` говорит нам, что "максимальный символ" в строке - буква "w", а
+функция `min` возвращает нам наименьший символ (в данном случае символ пробела).
 
-Another very common built-in function is the `len` function
-which tells us how many items are in its argument. If the argument to
-`len` is a string, it returns the number of characters in the
-string.
+Другая, широко используемая функция -  `len`, которая возвращает длину аргумента. 
+Если аргументом для `len` является строка, то функция вовратит количество символов в строке.
 
 ~~~~ {.python}
 >>> len('Hello world')
@@ -67,11 +58,11 @@ string.
 >>>
 ~~~~
 
-These functions are not limited to looking at strings. They can operate
-on any set of values, as we will see in later chapters.
+Данные функции применимы не только к строкам. Они могут использоваться на любом наборе значений, что мы и 
+увидим в дальнейших главах этой книги.
 
-You should treat the names of built-in functions as reserved words
-(i.e., avoid using "max" as a variable name).
+К именам встроенных функций следует относиться точно так же, как к зарезервированным словам - 
+необходимо избегать их использования в качестве имен переменных.
 
 Функции преобразования типов
 -------------------------
@@ -79,9 +70,9 @@ You should treat the names of built-in functions as reserved words
 \index{conversion!type}
 \index{type conversion}
 
-Python also provides built-in functions that convert values from one
-type to another. The `int` function takes any value and
-converts it to an integer, if it can, or complains otherwise:
+Python также имеет встроенные функции, которые позволяют преобразовать значение из одного типа в другой.
+Функция `int` принимает любое значение и преобразовывает его в целое число, если это возможно, 
+в противном случае - выдает ошибку:
 
 \index{int function}
 \index{function!int}
@@ -93,8 +84,8 @@ converts it to an integer, if it can, or complains otherwise:
 ValueError: invalid literal for int() with base 10: 'Hello'
 ~~~~
 
-`int` can convert floating-point values to integers, but it
-doesn't round off; it chops off the fraction part:
+`int` может конвертировать вещественные значения в целые, при этом не происходит округления,
+от числа просто убирается его дробная часть:
 
 ~~~~ {.python}
 >>> int(3.99999)
@@ -103,8 +94,7 @@ doesn't round off; it chops off the fraction part:
 -2
 ~~~~
 
-`float` converts integers and strings to floating-point
-numbers:
+`float` преобразует целыен числа и строки в вещественные числа:
 
 \index{float function}
 \index{function!float}
@@ -116,7 +106,7 @@ numbers:
 3.14159
 ~~~~
 
-Finally, `str` converts its argument to a string:
+И, наконец, `str` преобразует свой аругмент в строковое значение:
 
 \index{str function}
 \index{function!str}
@@ -136,26 +126,24 @@ Finally, `str` converts its argument to a string:
 \index{module}
 \index{module object}
 
-Python has a `math` module that provides most of the familiar
-mathematical functions. Before we can use the module, we have to import
-it:
+В состав Python входит модуль `math`, который предосталяет наиболее распространенные 
+математические функции. Перед использованием, его необходимо подключить:
 
 ~~~~ {.python}
 >>> import math
 ~~~~
 
-This statement creates a *module object* named math. If
-you print the module object, you get some information about it:
+Данная команда создает *объект моуля* по имени math. Если попытаться вывести его 
+через команду print:
 
 ~~~~ {.python}
 >>> print(math)
 <module 'math' (built-in)>
 ~~~~
 
-The module object contains the functions and variables defined in the
-module. To access one of the functions, you have to specify the name of
-the module and the name of the function, separated by a dot (also known
-as a period). This format is called *dot notation*.
+Объект модуля содержит функции и переменные определенные в модуле.
+Для того, чтобы получить доступ к одной из функций, необходимо указать
+имя модуля и имя функции, разделенные точками. Такой формат называется *точечной нотацией*.
 
 \index{dot notation}
 
@@ -167,9 +155,8 @@ as a period). This format is called *dot notation*.
 >>> height = math.sin(radians)
 ~~~~
 
-The first example computes the logarithm base 10 of the signal-to-noise
-ratio. The math module also provides a function called `log`
-that computes logarithms base e.
+В первом примере вычисляется логарифм по основанию 10 от соотношения сигнал/шум.
+ В модуле math также содержится функция `log`, которая вычисляет логарифм по основанию е.
 
 \index{log function}
 \index{function!log}
@@ -178,12 +165,10 @@ that computes logarithms base e.
 \index{trigonometric function}
 \index{function, trigonometric}
 
-The second example finds the sine of `radians`. The name of
-the variable is a hint that `sin` and the other trigonometric
-functions (`cos`, `tan`, etc.) take arguments in
-radians. To convert from degrees to radians, divide by 360 and multiply
-by $2
-\pi$:
+Во втором примере находится значение синуса в радианах. Имя переменной является
+намеком на то, что `sin` и другие тригонометрические функции (`cos`, `tan`, etc.) 
+принимают аргументы в радианах. Для перехода от градусов к радианам необходимо значение в градусах разделить 
+на 360 и умножить на 2 \pi$:
 
 ~~~~ {.python}
 >>> degrees = 45
@@ -192,14 +177,13 @@ by $2
 0.7071067811865476
 ~~~~
 
-The expression `math.pi` gets the variable `pi`
-from the math module. The value of this variable is an approximation of
-$\pi$, accurate to about 15 digits.
+Выражение `math.pi` берет значение переменной `pi` из модуля math. 
+Значением данной переменной является число $\pi$, взятое с точностью до 15 знаков после запятой.
 
 \index{pi}
 
-If you know your trigonometry, you can check the previous result by
-comparing it to the square root of two divided by two:
+Если вы разбираетесь в тригонометрии, вы можете проверить предыдущий результат, сравнив 
+значение с результатом от квадратного корня из 2, деленного на 2:
 
 \index{sqrt function}
 \index{function!sqrt}

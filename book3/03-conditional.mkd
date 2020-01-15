@@ -37,26 +37,24 @@ False
 <class 'bool'>
 ~~~~
 
-The `==` operator is one of the *comparison
-operators*; the others are:
+Оператор `==` является одним из *операторов
+сравнения*; другие операторы:
 
 ~~~~ {.python}
-x != y               # x is not equal to y
-x > y                # x is greater than y
-x < y                # x is less than y
-x >= y               # x is greater than or equal to y
-x <= y               # x is less than or equal to y
-x is y               # x is the same as y
-x is not y           # x is not the same as y
+x != y               # x не равно y
+x > y                # x больше y
+x < y                # x меньше y
+x >= y               # x больше либо равно y
+x <= y               # x меньше либо равно y
+x is y               # x такой же как  y
+x is not y           # x не такой же как y
 ~~~~
 
-Although these operations are probably familiar to you, the Python
-symbols are different from the mathematical symbols for the same
-operations. A common error is to use a single equal sign
-(`=`) instead of a double equal sign (`==`).
-Remember that `=` is an assignment operator and
-`==` is a comparison operator. There is no such thing as
-`=<` or `=>`.
+Несмотря на то, что эти операторы могут быть вам знакомы, в Python они 
+отличаются от математических символов для аналогичных операций. 
+Наиболее частая ошибка - использование одинарного знака (`=`) вместо двойного для сравнения (`==`).
+Помините, что  `=` это оператор присваивания, а `==` - оператор сравнения. 
+Также не существует таких комбинаций, как `=<` or `=>`.
 
 \index{comparison operator}
 \index{operator!comparison}
@@ -67,13 +65,13 @@ Remember that `=` is an assignment operator and
 \index{logical operator}
 \index{operator!logical}
 
-There are three *logical operators*: `and`,
-`or`, and `not`. The semantics (meaning) of these
-operators is similar to their meaning in English. For example,
+Существует три *логичесих оператора*logical operators: `and`,
+`or`, and `not`. Их семантика (значение) сходна значению в английском языке.
+Например,
 
 `x > 0 and x < 10`
 
-is true only if `x` is greater than 0 *and* less than 10.
+будет истиной, только при том условии, если `x` больше 0  и *меньше* чем 10.
 
 \index{and operator}
 \index{or operator}

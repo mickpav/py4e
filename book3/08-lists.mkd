@@ -1,51 +1,49 @@
 
-Lists
+Списки
 =====
 
 \index{list}
 \index{type!list}
 
-A list is a sequence
+Список - это последовательность
 --------------------
 
-Like a string, a *list* is a sequence of values. In a
-string, the values are characters; in a list, they can be any type. The
-values in list are called *elements* or sometimes
-*items*.
+Подобно строке, *список* является последовательностью значений. В строке
+занчениями являются отделные символы, в списке они могут быть любого типа. Значения списка 
+называются *элементами*.
 
 \index{element}
 \index{sequence}
 \index{item}
 
-There are several ways to create a new list; the simplest is to enclose
-the elements in square brackets ("[" and "]"):
+Существует насколько способов создания нового списка. Самы простой - это заключить элементы
+в квадратные скобки ("[" и "]"):
 
 ~~~~ {.python}
 [10, 20, 30, 40]
 ['crunchy frog', 'ram bladder', 'lark vomit']
 ~~~~
 
-The first example is a list of four integers. The second is a list of
-three strings. The elements of a list don't have to be the same type.
-The following list contains a string, a float, an integer, and (lo!)
-another list:
+В первом примере список содержит 4 целых числа. Второй список содержит три строки
+Элементы списка не обязательно должны быть одного типа.
+Следующий список содержит строку, вещественное число, целое число и другой список:
 
 ~~~~ {.python}
 ['spam', 2.0, 5, [10, 20]]
 ~~~~ 
 
-A list within another list is *nested*.
+Список внутри другого списка называется *вложенным*.
 
 \index{nested list}
 \index{list!nested}
 
-A list that contains no elements is called an empty list; you can create
-one with empty brackets, `[]`.
+Список, не содержащий элементов, называетсяы пустым списком, его можно создать 
+с посощью квадратных скобок, `[]`.
 
 \index{empty list}
 \index{list!empty}
 
-As you might expect, you can assign list values to variables:
+Само собой, элементы списка можно присваивать переменным:
 
 ~~~~ {.python .trinket}
 >>> cheeses = ['Cheddar', 'Edam', 'Gouda']
@@ -57,7 +55,7 @@ As you might expect, you can assign list values to variables:
 
 \index{assignment}
 
-Lists are mutable
+Списки изменяемые
 -----------------
 
 \index{list!element}
@@ -67,20 +65,19 @@ Lists are mutable
 \index{bracket operator}
 \index{operator!bracket}
 
-The syntax for accessing the elements of a list is the same as for
-accessing the characters of a string: the bracket operator. The
-expression inside the brackets specifies the index. Remember that the
-indices start at 0:
+Синтаксис доступа к элементам списка точно такой же, как и при доступе к 
+элементам строки: спомощью квадратных скобок. Выражение, заключенное в скобках означает 
+индекс. Как вы помните, нумерация индексов начинается с 0:
 
 ~~~~ {.python}
 >>> print(cheeses[0])
 Cheddar
 ~~~~
 
-Unlike strings, lists are mutable because you can change the order of
-items in a list or reassign an item in a list. When the bracket operator
-appears on the left side of an assignment, it identifies the element of
-the list that will be assigned.
+В отличие от строк, списки являются изменяемыми, так как вы можете изменить 
+порядок следования элементов или присвоить новое значение элементу списка. 
+Когда оператор скобки появляется с левой стороны от команды присваивания, он
+идентифицирует элемент списка, которому будет присвоено значение.
 
 \index{mutability}
 
@@ -91,31 +88,29 @@ the list that will be assigned.
 [17, 5]
 ~~~~
 
-The one-th element of `numbers`, which used to be 123, is
-now 5.
+Первый элемент списка `numbers`, который ранее имел значение  123, теперь равен 5.
 
 \index{index!starting at zero}
 \index{zero, index starting at}
 
-You can think of a list as a relationship between indices and elements.
-This relationship is called a *mapping*; each index "maps
-to" one of the elements.
+Вы можете представить себе список как отношение индексов к элементам.
+Такое отношение называется This relationship is called a *соответствие*; каждый индекс
+"соответствует" одному элементу.
 
 \index{item assignment}
 \index{assignment!item}
 
-List indices work the same way as string indices:
+Индексы списка работают аналогично индексам строк:
 
--   Any integer expression can be used as an index.
+-   в качестве индекса может выступать любое целочисленное выражение.
 
--   If you try to read or write an element that does not exist, you get
-    an `IndexError`.
+-   если вы попытаетсь прочитать или записать элемент, которого не существует,
+вы получите ошибку индекса `IndexError`.
 
 \index{exception!IndexError}
 \index{IndexError}
 
--   If an index has a negative value, it counts backward from the end of
-    the list.
+-   если индекс является отрицательным числом, отсчет идет начиная с конца списка.
 
 \index{list!index}
 \index{list!membership}
@@ -123,7 +118,7 @@ List indices work the same way as string indices:
 \index{in operator}
 \index{operator!in}
 
-The `in` operator also works on lists.
+Оператор `in` также работает в списках.
 
 ~~~~ {.python .trinket}
 >>> cheeses = ['Cheddar', 'Edam', 'Gouda']
@@ -133,7 +128,7 @@ True
 False
 ~~~~
 
-Traversing a list
+Проход по элементам списка
 -----------------
 
 \index{list!traversal}
@@ -142,18 +137,18 @@ Traversing a list
 \index{loop!for}
 \index{statement!for}
 
-The most common way to traverse the elements of a list is with a
-`for` loop. The syntax is the same as for strings:
+Самый частый способ перебора всех элементов списка - использование цикла `for`. 
+Синтаксис точно такой же, как у строк:
 
 ~~~~ {.python}
 for cheese in cheeses:
     print(cheese)
 ~~~~
 
-This works well if you only need to read the elements of the list. But
-if you want to write or update the elements, you need the indices. A
-common way to do that is to combine the functions `range` and
-`len`:
+Это работает отлично до тех пор, пока вам нужно только лишь прочитать элементы списка.
+Но если вам неоходимо записать или обновить элементы, вам придется использовать индексы.
+Один из варинатов - использование комбинации функций `range` и `len`:
+
 
 \index{looping!with indices}
 \index{index!looping with}
@@ -163,25 +158,24 @@ for i in range(len(numbers)):
     numbers[i] = numbers[i] * 2
 ~~~~
 
-This loop traverses the list and updates each element. `len`
-returns the number of elements in the list. `range` returns a
-list of indices from 0 to $n-1$, where $n$ is the length of the list.
-Each time through the loop, `i` gets the index of the next
-element. The assignment statement in the body uses `i` to
-read the old value of the element and to assign the new value.
+Данный цикл проходит по всему списку и обновляет каждый элемент. Функция `len`
+возвращает количество элементов в списке,  `range` возвращает список индексов с 0 до $n-1$, 
+где $n$ это длина списка.
+В теле цикла  `i` получает индекс следующего элемента. В присваивании `i` используется 
+чтобы прочитать старое значение элемента и присвоить ему новое.
 
 \index{item update}
 \index{update!item}
 
-A `for` loop over an empty list never executes the body:
+Цикл `for` на пустом списке никогда не дойдет до исполнений операций в теле:
 
 ~~~~ {.python}
 for x in empty:
     print('This never happens.')
 ~~~~
 
-Although a list can contain another list, the nested list still counts
-as a single element. The length of this list is four:
+Несмотря на то, что список сожет содержать другой список, вложенный список 
+все равно будет считаться как единичный элемент. Длина данного списка - 4:
 
 \index{nested list}
 \index{list!nested}
@@ -190,12 +184,12 @@ as a single element. The length of this list is four:
 ['spam', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]
 ~~~~
 
-List operations
+Операции со списками 
 ---------------
 
 \index{list!operation}
 
-The `+` operator concatenates lists:
+Оператор `+` производит конкатенацию списков:
 
 \index{concatenation!list}
 \index{list!concatenation}
@@ -208,7 +202,7 @@ The `+` operator concatenates lists:
 [1, 2, 3, 4, 5, 6]
 ~~~~
 
-Similarly, the `*` operator repeats a list a given number of times:
+Соответственно, оператор  `*` повторяет список определенное количество раз:
 
 \index{repetition!list}
 \index{list!repetition}
@@ -220,10 +214,9 @@ Similarly, the `*` operator repeats a list a given number of times:
 [1, 2, 3, 1, 2, 3, 1, 2, 3]
 ~~~~
 
-The first example repeats four times. The second example repeats the
-list three times.
+В первом примере список повторяется 4 раза, во втором - три раза.
 
-List slices
+Срезы списков
 -----------
 
 \index{slice operator}
@@ -232,7 +225,7 @@ List slices
 \index{list!slice}
 \index{slice!list}
 
-The slice operator also works on lists:
+Оператор срезов также работает на списках:
 
 ~~~~ {.python .trinket}
 >>> t = ['a', 'b', 'c', 'd', 'e', 'f']
@@ -244,9 +237,9 @@ The slice operator also works on lists:
 ['d', 'e', 'f']
 ~~~~
 
-If you omit the first index, the slice starts at the beginning. If you
-omit the second, the slice goes to the end. So if you omit both, the
-slice is a copy of the whole list.
+Если опустить первый индекс - срез пойдет с самого начала списка. Если опустить второй индекс,
+срез будет создан до самого конца списка. Если опустить оба индекса, то в результате среза будет создана 
+копия всего списка.
 
 \index{list!copy}
 \index{slice!copy}
@@ -257,13 +250,12 @@ slice is a copy of the whole list.
 ['a', 'b', 'c', 'd', 'e', 'f']
 ~~~~
 
-Since lists are mutable, it is often useful to make a copy before
-performing operations that fold, spindle, or mutilate lists.
+Как как списки являются изменяемыми, то весьма полезным может оказаться создание копии списка
+перед выполнением операций, которые меняют содержимое списков.
 
 \index{mutability}
 
-A slice operator on the left side of an assignment can update multiple
-elements:
+Оператор среза, находящийся слева от оператора присваивания, может менять значения нескольких элементов:
 
 \index{slice!update}
 \index{update!slice}
@@ -275,14 +267,14 @@ elements:
 ['a', 'x', 'y', 'd', 'e', 'f']
 ~~~~
 
-List methods
+Методы списков
 ------------
 
 \index{list!method}
 \index{method, list}
 
-Python provides methods that operate on lists. For example,
-`append` adds a new element to the end of a list:
+Для выполнения операций со списками в Python реализован ряд методов. К примеру, 
+`append` добавляет новый элемент в конец списка:
 
 \index{append method}
 \index{method!append}
@@ -294,8 +286,7 @@ Python provides methods that operate on lists. For example,
 ['a', 'b', 'c', 'd']
 ~~~~
 
-`extend` takes a list as an argument and appends all of the
-elements:
+`extend` принимает в качестве аргумента список и добавляет все его элементы к другому списку:
 
 \index{extend method}
 \index{method!extend}
@@ -308,9 +299,9 @@ elements:
 ['a', 'b', 'c', 'd', 'e']
 ~~~~
 
-This example leaves `t2` unmodified.
+В данном примере содержимое списка  `t2` остаетсяч неизменным.
 
-`sort` arranges the elements of the list from low to high:
+Метод `sort` упорядочивает элементы списка от меньего к большему:
 
 \index{sort method}
 \index{method!sort}

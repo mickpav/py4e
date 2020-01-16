@@ -370,7 +370,7 @@ b
 ['a', 'c']
 ~~~~
 
-Метод  `remove`всегда возвращает значение `None`.
+Метод  `remove` всегда возвращает значение `None`.
 
 \index{None special value}
 \index{special value!None}
@@ -408,9 +408,9 @@ b
 
 Функция `sum()` работает только в том случае, когда элементы списка являются числам.
 Остальные функции (`max()`, `len()`, и т.д.) работают со списками строк и дургими типами данных,
-короые можно сравнивать
+которые можно сравнивать
 
-Теперь мы может переписать программу, которая высчитывала среднее значение группы чисел, введенных пользователем 
+Теперь мы можем переписать программу, которая высчитывала среднее значение группы чисел, введенных пользователем 
 с использованием списков.
 
 Для начала - программа подсчета среднего значения без использования списка:
@@ -425,21 +425,20 @@ built-in functions to compute the sum and count at the end.
 
 \VerbatimInput{../code3/avelist.py}
 
-We make an empty list before the loop starts, and then each time we have
-a number, we append it to the list. At the end of the program, we simply
-compute the sum of the numbers in the list and divide it by the count of
-the numbers in the list to come up with the average.
+Мы создаем пустой список перед началом цикла и каждый раз, как пользователь вводит числоЮ
+мы добавляем его в список. В конце программы мы просто вычисляем сумму чисел в списке 
+и делим ее на количество числе в списке. 
 
-Lists and strings
+Списки и строки
 -----------------
 
 \index{list}
 \index{string}
 \index{sequence}
 
-A string is a sequence of characters and a list is a sequence of values,
-but a list of characters is not the same as a string. To convert from a
-string to a list of characters, you can use `list`:
+Строка является последовательностью символов и список является последовательностью значений,
+однако, список, состоящий из символов, не будет являться строкой. Для переход от строки к списку 
+мы можем воспользоваться методом `list`:
 
 \index{list!function}
 \index{function!list}
@@ -451,14 +450,13 @@ string to a list of characters, you can use `list`:
 ['s', 'p', 'a', 'm']
 ~~~~
 
-Because `list` is the name of a built-in function, you should
-avoid using it as a variable name. I also avoid the letter
-"l" because it looks too much like the number "1".
-So that's why I use "t".
+Так как `list` является встроенной функцией, вы должны избегать ее использования в качетве 
+имени переменной. Я также избегаю использовать букву "l", потому что ее очень легко перепутать с 
+цифрой "1".
+Именно поэтому я использую "t".
 
-The `list` function breaks a string into individual letters.
-If you want to break a string into words, you can use the
-`split` method:
+Функция `list`  разбивает строку на отдельные символы.
+Если вам необходимо разбить строку на отдельные слова, вы можете воспользоваться методом`split`:
 
 \index{split method}
 \index{method!split}
@@ -472,13 +470,12 @@ If you want to break a string into words, you can use the
 the
 ~~~~
 
-Once you have used `split` to break the string into a list of
-words, you can use the index operator (square bracket) to look at a
-particular word in the list.
+После того, как вы с помощью `split` превратили строку в список слов, вы можете использовать
+индексный оператор (квадратные скобки) для доступа к каждому в отдельности слову в списке.
 
-You can call `split` with an optional argument called a
-*delimiter* that specifies which characters to use as
-word boundaries. The following example uses a hyphen as a delimiter:
+Вы таже можете использовать `split` с дополнительным аргументом, который называется *разделитель*,
+с помощью которого указывается, какой символ использовать в качестве разделителя слов. 
+Следующий пример использует в качестве разделителя тире:
 
 \index{optional argument}
 \index{argument!optional}
@@ -491,10 +488,8 @@ word boundaries. The following example uses a hyphen as a delimiter:
 ['spam', 'spam', 'spam']
 ~~~~
 
-`join` is the inverse of `split`. It takes a list
-of strings and concatenates the elements. `join` is a string
-method, so you have to invoke it on the delimiter and pass the list as a
-parameter:
+Метод `join` является противоположностью `split`. Он принимает список строк и объединяет их элементы.
+`join` является строковым методом, поэтому перед вызовом функции, ей необходимо в качетве параметра передать разделитель:
 
 \index{join method}
 \index{method!join}

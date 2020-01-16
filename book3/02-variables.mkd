@@ -535,7 +535,7 @@ v = 5     # скорость в м/с
 
 При условии соблюдения простых правил именования переменных и избегании использования 
 зарезервированных слов, у вас есть большой выбор как называть свои переменные.
-В самом начале такой выбор может вводить в заблуждение как при чтеии исходного кода, таки при написании
+В самом начале такой выбор может вводить в заблуждение как при чтеии исходного кода, так и при написании
 собственных программ. 
 Например, следующие три программы идентичны в плане результатов выполнения, но очень сильно различаются в плане 
 понимания структуры и выполняемых функций.
@@ -682,8 +682,8 @@ can happen if you spell a variable name wrong:
 NameError: name 'principle' is not defined
 ~~~~
 
-Variables names are case sensitive, so `LaTeX` is not the
-same as `latex`.
+Имена переменных в Python являются регистрозависимыми, поэтому переменная  `LaTeX` и переменная 
+`latex` будут ссылаться на разные данные.
 
 \index{case-sensitivity, variable names}
 \index{semantic error}
@@ -806,8 +806,8 @@ Enter your name: Chuck
 Hello Chuck
 ~~~~
 
-**Exercise 3: Write a program to prompt the user for hours and rate per
-hour to compute gross pay.**
+**Упражнение 3: Напишите программу, которая запрашивает у пользователя количество 
+отработанных часов и размер почасовой оплаты и рассчитывыает размер оплаты.**
 
 ~~~~
 Enter Hours: 35
@@ -815,20 +815,19 @@ Enter Rate: 2.75
 Pay: 96.25
 ~~~~
 
-We won't worry about making sure our pay has exactly two digits after
-the decimal place for now. If you want, you can play with the built-in
-Python `round` function to properly round the resulting pay
-to two decimal places.
+На данном этапе мы не обращаем внимание на то, что итоговая сумма
+имеет больше, чем 2 знака после запятойю Если хотите, можете поэкспериментировать
+со встроенной функцией Python `round` для того, чтобы округлит полученный ответ
+до двух десятичных знаков.
 
-**Exercise 4: Assume that we execute the following assignment statements:**
+**Упражнение 4: Предположим, что мы выполнили следующие команды присваивания:**
 
 ~~~~
 width = 17
 height = 12.0
 ~~~~
 
-For each of the following expressions, write the value of the expression
-and the type (of the value of the expression).
+Для каждого из следующих выражений запишите получившееся значение и его тип.
 
 1.  `width//2`
 
@@ -838,7 +837,7 @@ and the type (of the value of the expression).
 
 4.  `1 + 2 * 5`
 
-Use the Python interpreter to check your answers.
+Используйте Python в режиме интерпретатора для проверки ответов .
 
 **Упражнение 5: Напишите программу, которая запрашивает у пользователя температуру
 в градусах Цельсия, преобразует значение в градусы Фаренгейта и выводит полученный результат.**

@@ -37,8 +37,8 @@
 \index{nested list}
 \index{list!nested}
 
-Список, не содержащий элементов, называетсяы пустым списком, его можно создать 
-с посощью квадратных скобок, `[]`.
+Список, не содержащий элементов, называется пустым списком, его можно создать 
+с помощью квадратных скобок, `[]`.
 
 \index{empty list}
 \index{list!empty}
@@ -55,7 +55,7 @@
 
 \index{assignment}
 
-Списки изменяемые
+Списки -  изменяемые
 -----------------
 
 \index{list!element}
@@ -94,7 +94,7 @@ Cheddar
 \index{zero, index starting at}
 
 Вы можете представить себе список как отношение индексов к элементам.
-Такое отношение называется This relationship is called a *соответствие*; каждый индекс
+Такое отношение называется  *соответствие*; каждый индекс
 "соответствует" одному элементу.
 
 \index{item assignment}
@@ -161,7 +161,7 @@ for i in range(len(numbers)):
 Данный цикл проходит по всему списку и обновляет каждый элемент. Функция `len`
 возвращает количество элементов в списке,  `range` возвращает список индексов с 0 до $n-1$, 
 где $n$ это длина списка.
-В теле цикла  `i` получает индекс следующего элемента. В присваивании `i` используется 
+В теле цикла  `i` получает индекс следующего элемента. В присваивании `i` используется, 
 чтобы прочитать старое значение элемента и присвоить ему новое.
 
 \index{item update}
@@ -389,8 +389,8 @@ b
 Списки и функции
 -------------------
 
-There are a number of built-in functions that can be used on lists that
-allow you to quickly look through a list without writing your own loops:
+Для списков реализован ряд встроенных функций, с помощью которых можно организовать 
+быстрый поиск по списку без необходимости писать свои собственные циклы:
 
 ~~~~ {.python .trinket}
 >>> nums = [3, 41, 12, 9, 74, 15]
@@ -406,20 +406,19 @@ allow you to quickly look through a list without writing your own loops:
 25
 ~~~~
 
-The `sum()` function only works when the list elements are
-numbers. The other functions (`max()`, `len()`,
-etc.) work with lists of strings and other types that can be comparable.
+Функция `sum()` работает только в том случае, когда элементы списка являются числам.
+Остальные функции (`max()`, `len()`, и т.д. работают со списками строк и дургими типами данных,
+короые можно сравнивать
 
-We could rewrite an earlier program that computed the average of a list
-of numbers entered by the user using a list.
+Теперь мы может переписать программу, которая высчитывала среднее значение группы чисел, введенных пользователем 
+с использованием списков.
 
-First, the program to compute an average without a list:
+Для начала - программа подсчета среднего значения без использования списка:
 
 \VerbatimInput{../code3/avenum.py}
 
-In this program, we have `count` and `total`
-variables to keep the number and running total of the user's numbers as
-we repeatedly prompt the user for a number.
+В этой программе мы используем переменные  `count` и `total`для 
+подсчета количества чисел и их суммы.
 
 We could simply remember each number as the user entered it and use
 built-in functions to compute the sum and count at the end.

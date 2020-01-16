@@ -299,7 +299,7 @@ for x in empty:
 ['a', 'b', 'c', 'd', 'e']
 ~~~~
 
-В данном примере содержимое списка  `t2` остаетсяч неизменным.
+В данном примере содержимое списка  `t2` остается неизменным.
 
 Метод `sort` упорядочивает элементы списка от меньего к большему:
 
@@ -313,23 +313,22 @@ for x in empty:
 ['a', 'b', 'c', 'd', 'e']
 ~~~~
 
-Most list methods are void; they modify the list and return
-`None`. If you accidentally write `t = t.sort()`,
-you will be disappointed with the result.
+Большинство методов работы со списками не возвращают значений, они лишь модифицируют список
+и возвращают значение `None`. Если вы случайно запишете `t = t.sort()`, то будете разочарованы результатом.
 
 \index{void method}
 \index{method!void}
 \index{None special value}
 \index{special value!None}
 
-Deleting elements
+Удаление элементов
 -----------------
 
 \index{element deletion}
 \index{deletion, element of list}
 
-There are several ways to delete elements from a list. If you know the
-index of the element you want, you can use `pop`:
+Существует несколько методов для удаления элементов из списка. Если вам известен индекс
+удаляемого элемента, можно использовать метод `pop`:
 
 \index{pop method}
 \index{method!pop}
@@ -343,12 +342,10 @@ index of the element you want, you can use `pop`:
 b
 ~~~~
 
-`pop` modifies the list and returns the element that was
-removed. If you don't provide an index, it deletes and returns the last
-element.
+`pop` изменяет список и возвращает элемент, который был удален. 
+Если не указать индекс, метод удалит и вернет последний элемент списка.
 
-If you don't need the removed value, you can use the `del`
-operator:
+Если вам не нужно значение удаленного элемента, можно воспользоваться методом `del`:
 
 \index{del operator}
 \index{operator!del}
@@ -360,8 +357,8 @@ operator:
 ['a', 'c']
 ~~~~
 
-If you know the element you want to remove (but not the index), you can
-use `remove`:
+Если вы знаете значение элемента, который нужно удалить (но не индекс), 
+можно воспользоваться методом `remove`:
 
 \index{remove method}
 \index{method!remove}
@@ -373,13 +370,12 @@ use `remove`:
 ['a', 'c']
 ~~~~
 
-The return value from `remove` is `None`.
+Метод  `remove`всегда возвращает значение `None`.
 
 \index{None special value}
 \index{special value!None}
 
-To remove more than one element, you can use `del` with a
-slice index:
+Для удаления более чем одного элемента можно восользоваться методом  `del` с индексом среза:
 
 ~~~~ {.python .trinket}
 >>> t = ['a', 'b', 'c', 'd', 'e', 'f']
@@ -388,10 +384,9 @@ slice index:
 ['a', 'f']
 ~~~~
 
-As usual, the slice selects all the elements up to, but not including,
-the second index.
+И как обычно, срез выбирает все элементы с первого но не включая второй индекс.
 
-Lists and functions
+Списки и функции
 -------------------
 
 There are a number of built-in functions that can be used on lists that

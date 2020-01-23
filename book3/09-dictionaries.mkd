@@ -1,4 +1,4 @@
-Dictionaries
+Словари
 ============
 
 \index{dictionary}
@@ -10,9 +10,9 @@ Dictionaries
 \index{index}
 \index{}
 
-A *dictionary* is like a list, but more general. In a
-list, the index positions have to be integers; in a dictionary, the
-indices can be (almost) any type.
+*Словарь* напоминает список, но в более общем смысле. В списке в качестве 
+значений индексов выступают целые числа; в словаре, в качестве индекса
+может быть (практически) любой тип данных.
 
 You can think of a dictionary as a mapping between a set of indices
 (which are called *keys*) and a set of values. Each key

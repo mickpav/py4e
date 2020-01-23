@@ -64,19 +64,17 @@
 выполнить этот код у себя на компьютере, у вас может получиться совершенно другой результат.
 В целом, порядок следования элементов в словаре является непредсказуемым. 
 
-But that's not a problem because the elements of a dictionary are never
-indexed with integer indices. Instead, you use the keys to look up the
-corresponding values:
+Но это не является проблемой, так как элементы словаря никогда не индексируются
+целочисленными индексами. Вместо этого вы используете ключи для поиска соответствующих значений:
 
 ~~~~ {.python}
 >>> print(eng2sp['two'])
 'dos'
 ~~~~
 
-The key `'two'` always maps to the value "dos" so the order
-of the items doesn't matter.
+Ключ `'two'` всегда соотносится со значением  "dos", поэтому порядок следования не важен.
 
-If the key isn't in the dictionary, you get an exception:
+Если ключ отсутствует в словаре, вы получите исключение:
 
 \index{exception!KeyError}
 \index{KeyError}
@@ -86,8 +84,7 @@ If the key isn't in the dictionary, you get an exception:
 KeyError: 'four'
 ~~~~
 
-The `len` function works on dictionaries; it returns the
-number of key-value pairs:
+Функция `len` работает со словарями, она возвращает количество пар ключ-значение:
 
 \index{len function}
 \index{function!len}
@@ -97,9 +94,8 @@ number of key-value pairs:
 3
 ~~~~
 
-The `in` operator works on dictionaries; it tells you whether
-something appears as a *key* in the dictionary (appearing as a value is
-not good enough).
+Оператор `in` operator также работает со словарями, он показывает содержится ли какое-либо значение 
+в качестве *ключа* в словаре (к сожалению, то же самое нельзя сказать про значение).
 
 \index{membership!dictionary}
 \index{in operator}
@@ -112,9 +108,9 @@ True
 False
 ~~~~
 
-To see whether something appears as a value in a dictionary, you can use
-the method `values`, which returns the values as a type that can be converted 
-to a list, and then use the `in` operator:
+Для того, чтобы найти какое-либо значение в словаре, вы можете использовать метод `values`, 
+который возвращает значения в виде типа, который может быть сконвертирован в список,
+и на котором можно использовать оператор  `in` :
 
 \index{values method}
 \index{method!values}
@@ -125,29 +121,28 @@ to a list, and then use the `in` operator:
 True
 ~~~~
 
-The `in` operator uses different algorithms for lists and
-dictionaries. For lists, it uses a linear search algorithm. As the list
-gets longer, the search time gets longer in direct proportion to the
-length of the list. For dictionaries, Python uses an algorithm called a
-*hash table* that has a remarkable property: the
-`in` operator takes about the same amount of time no matter
-how many items there are in a dictionary. I won't explain why hash
-functions are so magical, but you can read more about it at
+Оператор `in` использует различные алгоритмы для списков и словарей.
+Для списков используется алгорит линейного поиска. С увеличением размера 
+списка увеличивается и время поиска, причем прямо пропорционально длине списка. 
+Для словарей Python используетя алгоритм, называемый  *хэш-таблица*, у которого есть
+замечательное свойство: оператору `in` всегда требуется одно и то же время для поиска,
+независимо от того, сколько элементов находится в словаре. Я не могу объяснить почему 
+хэш-таблица обладает такими волшебными свойствами, но вы можете почитать об этом по адресу
 [wikipedia.org/wiki/Hash\_table](https://wikipedia.org/wiki/Hash_table).
 
 \index{hash table}
 \index{set membership}
 \index{membership!set}
 
-**Exercise 1: Download a copy of the file**
+**Упражнение 1: Загрузите копию файла**
 [www.py4e.com/code3/words.txt](http://www.py4e.com/code3/words.txt)
 
-**Write a program that reads the words in *words.txt* and
-stores them as keys in a dictionary. It doesn't matter what the values
-are. Then you can use the `in` operator as a fast way to
-check whether a string is in the dictionary.**
+**Напишите программу, которая читает слова в файле *words.txt* и сохраняет их
+в качестве ключей словаря. На значения в словаре пока не обращайте внимания.
+Затем вы сможете использовать оператор `in` как быстрый способ для проверки,
+находится ли строка в словаре.**
 
-Dictionary as a set of counters
+Словарь как набор счетчиков
 -------------------------------
 
 \index{counter}

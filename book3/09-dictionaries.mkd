@@ -14,17 +14,14 @@
 значений индексов выступают целые числа; в словаре, в качестве индекса
 может быть (практически) любой тип данных.
 
-You can think of a dictionary as a mapping between a set of indices
-(which are called *keys*) and a set of values. Each key
-maps to a value. The association of a key and a value is called a
-*key-value pair* or sometimes an *item*.
+Словарь можно представить себе как соотношение между набором индексов,
+(которые называются *ключами*) и набором значений. Каждый ключ имеет соответствующее 
+значение. Связь ключа и значения называется *ключ-значение*.
 
-As an example, we'll build a dictionary that maps from English to
-Spanish words, so the keys and the values are all strings.
-
-The function `dict` creates a new dictionary with no items.
-Because `dict` is the name of a built-in function, you should
-avoid using it as a variable name.
+Вв качестве примера мы создадим словарь, который содержит соответствие 
+английских слов к испанским, соответственно ключи и значения будут строковыми параметрами.
+Функция `dict` создает новый пустой словарь. Так как `dict` является встроенной функцией,
+вы должны избегать ее использования в кчестве имени переменной.
 
 \index{dict function}
 \index{function!dict}
@@ -35,8 +32,8 @@ avoid using it as a variable name.
 {}
 ~~~~
 
-The curly brackets, `{}`, represent an empty dictionary. To add items to
-the dictionary, you can use square brackets:
+Фигурные скобки  `{}`, представляют пустой словарь. Для добавления элементов в него, вы можете использовать 
+квадратные скобки:
 
 \index{squiggly bracket}
 \index{bracket!squiggly}
@@ -45,17 +42,17 @@ the dictionary, you can use square brackets:
 >>> eng2sp['one'] = 'uno'
 ~~~~
 
-This line creates an item that maps from the key `'one'` to
-the value "uno". If we print the dictionary again, we see a key-value
-pair with a colon between the key and value:
+Данная строка создает элемент, который соотносит ключ `'one'` со
+значением "uno". Если мы сейчас выведем содержимое словаря, мы увидим
+пару ключ-значение, разделенные двоеточием:
 
 ~~~~ {.python}
 >>> print(eng2sp)
 {'one': 'uno'}
 ~~~~
 
-This output format is also an input format. For example, you can create
-a new dictionary with three items.  But if you print `eng2sp`, you might be surprised:
+Такой формат вывода является также и форматом ввода. К примеру, вы можете создать новый
+словарь с тремя элементами.  Но если вы выведете его содержимое, можете быть удивлены:
 
 ~~~~ {.python}
 >>> eng2sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
@@ -63,9 +60,9 @@ a new dictionary with three items.  But if you print `eng2sp`, you might be surp
 {'one': 'uno', 'three': 'tres', 'two': 'dos'}
 ~~~~
 
-The order of the key-value pairs is not the same. In fact, if you type
-the same example on your computer, you might get a different result. In
-general, the order of items in a dictionary is unpredictable.
+Порядок следования элементов в словаре не всегда тот же самый. Если вы попробуете 
+выполнить этот код у себя на компьютере, у вас может получиться совершенно другой результат.
+В целом, порядок следования элементов в словаре является непредсказуемым. 
 
 But that's not a problem because the elements of a dictionary are never
 indexed with integer indices. Instead, you use the keys to look up the

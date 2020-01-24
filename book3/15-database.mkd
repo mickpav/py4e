@@ -1,7 +1,7 @@
-Using Databases and SQL
+Базы данных и  SQL
 =======================
 
-What is a database?
+Что такое база данных?
 -------------------
 
 \index{database}

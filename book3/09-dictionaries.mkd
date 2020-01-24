@@ -147,36 +147,30 @@ True
 
 \index{counter}
 
-Suppose you are given a string and you want to count how many times each
-letter appears. There are several ways you could do it:
+Предположим, вам дана строка и вы хотите посчитать, сколько раз в ней встречается
+каждая буква. Существует несколько способов сделать это:
 
-1.  You could create 26 variables, one for each letter of the alphabet.
-    Then you could traverse the string and, for each character,
-    increment the corresponding counter, probably using a chained
-    conditional.
+1.  Вы можете создать 26 переменных, по одной для каждой буквы алфавита.
+    Затем вы с помощью перебора строки увеличивать значение соответствующей переменной,
+    возможно с помощью цепного условия.
 
-2.  You could create a list with 26 elements. Then you could convert
-    each character to a number (using the built-in function
-    `ord`), use the number as an index into the list, and
-    increment the appropriate counter.
+2.  Вы можете использовать список из 26 элементов. Затем сконвертировать каждый символ
+в число (используя втроенную функцию `ord`), затем использовать это число как индекс в списке
+и инкрементировать соответствующий счетчик.
 
-3.  You could create a dictionary with characters as keys and counters
-    as the corresponding values. The first time you see a character, you
-    would add an item to the dictionary. After that you would increment
-    the value of an existing item.
+3.  Вы можете создать слдоварь, в котором символы будут выступать ключами, а счетчики - 
+соответствующими значениями. При первом вхождении символа в словарь добавляется элемент. Затем
+инкрментируется значение соответствующего ключа.
 
-Each of these options performs the same computation, but each of them
-implements that computation in a different way.
+Каждый из этих вариантов выполняет одно и то же действие, но реализовано оно различными способами.
 
 \index{implementation}
 
-An *implementation* is a way of performing a computation;
-some implementations are better than others. For example, an advantage
-of the dictionary implementation is that we don't have to know ahead of
-time which letters appear in the string and we only have to make room
-for the letters that do appear.
+*Имплементация (реализация)*  - способ реализации операции; некоторые реализации могут быть хуже,
+нектороые - лучше. Например, преимуществом реализации со словарем является то, что нам нет необходимости
+заранее предусматривать появление конкретных символов, нужно лишь озаботиться их рамещением.
 
-Here is what the code might look like:
+Вот как может выглядеть код для решения задачи:
 
 ~~~~ {.python .trinket}
 word = 'brontosaurus'

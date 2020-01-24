@@ -1,22 +1,22 @@
 
-Object-oriented programming
+Объектно-ориентированное программирование
 ===========================
 
-Managing larger programs
+Управление большими программами
 ------------------------
 
 \index{object-oriented}
 
-At the beginning of this book, we came up with four basic programming
-patterns which we use to construct programs:
+В начале данной книги мы познакомились с 4 основными шаблонами программирования,
+которые мы использовали для написания программ:
 
-* Sequential code
-* Conditional code (if statements)
-* Repetitive code (loops)
-* Store and reuse (functions)
+* Последовательное выполнение
+* Условное выполнение (оператор if )
+* Повторение кода (циклы)
+* сохранение и повторное использование (функции)
 
-In later chapters, we explored simple variables as well as collection
-data structures like lists, tuples, and dictionaries.
+В последующих главах мы рассмотрели простые переменные, более сложные структуры, 
+такие как списки, кортежи и словари.
 
 As we build programs, we design data structures and write code
 to manipulate those data structures.   There are many ways to write programs
@@ -35,7 +35,7 @@ In a way, object oriented programming is a way to arrange your code
 so that you can zoom into 50 lines of the code and understand it
 while ignoring the other 999,950 lines of code for the moment.
 
-Getting started
+Итак, начнем
 ---------------
 
 Like many aspects of programming, it is necessary to learn the concepts of
@@ -48,7 +48,7 @@ objects are constructed and how they function and most importantly how
 we make use of the capabilities of objects that are provided to us by Python
 and Python libraries.
 
-Using objects
+Использование объектов
 -------------
 
 As it turns out, we have been using objects all along in this book. Python

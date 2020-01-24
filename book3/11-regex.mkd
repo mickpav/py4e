@@ -1,11 +1,9 @@
-Regular expressions
+Регулярные выражения
 ===================
 
-So far we have been reading through files, looking for patterns and
-extracting various bits of lines that we find interesting. We have been
-
-using string methods like `split` and `find` and
-using lists and string slicing to extract portions of the lines.
+Итак, мы научились читать файлы, искать в них шаблоны и извлекать раличчные
+фрагменты строк. Для этого мы использовали методы `split` и `find`, списки и срезы строк для 
+извленчения фрагментов.
 
 \index{regular expressions}
 \index{regex}

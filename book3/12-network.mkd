@@ -1,4 +1,4 @@
-Networked programs
+Сетевые программы
 ==================
 
 While many of the examples in this book have focused on reading files
@@ -9,7 +9,7 @@ In this chapter we will pretend to be a web browser and retrieve web
 pages using the Hypertext Transfer Protocol (HTTP). Then we will read
 through the web page data and parse it.
 
-Hypertext Transfer Protocol - HTTP
+Протокол передачи гипертекста - HTTP
 -----------------------------------
 
 The network protocol that powers the web is actually quite simple and

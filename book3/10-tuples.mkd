@@ -67,7 +67,7 @@
 ~~~~
 
 Если указан аргумент и он является последовательностью (строка, список, другой кортеж),
-результатом вызова функции будет кортеж, сотоящий из элементов последовательности:
+результатом вызова функции будет кортеж, состоящий из элементов последовательности:
 
 ~~~~ {.python .trinket}
 >>> t = tuple('lupins')
@@ -75,11 +75,11 @@
 ('l', 'u', 'p', 'i', 'n', 's')
 ~~~~
 
-Because `tuple` is the name of a constructor, you should
-avoid using it as a variable name.
+Так как `tuple` Влется именем конструктора, следует избегать его испорльзования в качестве имени 
+переменной.
 
-Most list operators also work on tuples. The bracket operator indexes an
-element:
+Основные операторы работы со списками таже доступны и для кортежей. С помощью квадратных скобок 
+можно проиндексировать элемент:
 
 \index{bracket operator}
 \index{operator!bracket}
@@ -90,7 +90,7 @@ element:
 'a'
 ~~~~
 
-And the slice operator selects a range of elements.
+Оператор среза возвращает последовательность элементов кортежа.
 
 \index{slice operator}
 \index{operator!slice}
@@ -102,8 +102,7 @@ And the slice operator selects a range of elements.
 ('b', 'c')
 ~~~~
 
-But if you try to modify one of the elements of the tuple, you get an
-error:
+Но если вы попытаетсь изменить элемент кортежа, то получите сообщение об ошибке:
 
 \index{exception!TypeError}
 \index{TypeError}
@@ -115,8 +114,7 @@ error:
 TypeError: object doesn't support item assignment
 ~~~~
 
-You can't modify the elements of a tuple, but you can replace one tuple
-with another:
+Вы не можене изменять элементы кортежа, но вы можете заменить один кортеж другим:
 
 ~~~~ {.python .trinket}
 >>> t = ('A',) + t[1:]
@@ -124,7 +122,7 @@ with another:
 ('A', 'b', 'c', 'd', 'e')
 ~~~~
 
-Comparing tuples
+Сравнение кортежей
 ----------------
 
 \index{comparison!tuple}
@@ -145,9 +143,8 @@ True
 True
 ~~~~
 
-The `sort` function works the same way. It sorts primarily by
-first element, but in the case of a tie, it sorts by second element, and
-so on.
+Функиця `sort` работает аналогичным образом. Сортировка осуществляется сначала по
+первому элементу, в случае совпадения  - по второму  и так далее.
 
 This feature lends itself to a pattern called *DSU* for
 

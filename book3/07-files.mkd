@@ -4,29 +4,28 @@
 \index{file}
 \index{type!file}
 
-Persistence
+Постоянство
 -----------
 
 \index{persistence}
 \index{secondary memory}
 
-So far, we have learned how to write programs and communicate our
-intentions to the *Central Processing Unit* using
-conditional execution, functions, and iterations. We have learned how to
-create and use data structures in the *Main Memory*. The
-CPU and memory are where our software works and runs. It is where all of
-the "thinking" happens.
+Итак, мы научились как писать программы, и передавать наши намерения
+*Центральному процессору (CPU)* с помощью условных операторов, функций и циклов. 
+Мы научились создавать и использовать структуры данных в *оперативной памяти*. 
+Процессор и память - это то место, где происходит запуск и исполнения наших 
+программ. Это там, где происходит процесс "обдумывания".
 
-But if you recall from our hardware architecture discussions, once the
-power is turned off, anything stored in either the CPU or main memory is
-erased. So up to now, our programs have just been transient fun
+Но, как вы помните из наших дискуссий об аппаратной составляющей, при отключении 
+питания, все, что хранится в процессоре и оперативной памяти пропадает. 
+So up to now, our programs have just been transient fun
 exercises to learn Python.
 
 ![Secondary Memory](height=2.5in@../images/arch)
 
-In this chapter, we start to work with *Secondary Memory*
-(or files). Secondary memory is not erased when the power is turned
-off. Or in the case of a USB flash drive, the data we write from our
+В данной главе мы начинаем работать со *вторичной памятью (постоянной)*
+(или файлами). Содержимое постоянной памяти не исчезает при отключении питания.
+Или, в случае использования накопителя на Or in the case of a USB flash drive, the data we write from our
 programs can be removed from the system and transported to another
 system.
 

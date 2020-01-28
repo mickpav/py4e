@@ -1,37 +1,33 @@
-Visualizing data
+Визуализация данных
 ================
 
-So far we have been learning the Python language and then learning how
-to use Python, the network, and databases to manipulate data.
+Итак, мы изучаем язык и изучаем как с помощью этого языка, сети и баз данных манипулировать 
+данными.
 
-In this chapter, we take a look at three complete applications that
-bring all of these things together to manage and visualize data. You
-might use these applications as sample code to help get you started in
-solving a real-world problem.
+В данной главе мы взглянем на три законченных приложения, которые сводят воедино 
+вышеупомянутое для обработки и визуализации данных. Вы можете использовать эти приложения как образец,
+который поможет вам в решении реальных задач.
 
-Each of the applications is a ZIP file that you can download and extract
-onto your computer and execute.
+Каждое из приложений является ZIP архивом, который вы можете загрузить и выполнить на своем компьютере.
 
-Building a Google map from geocoded data
+Построение карт Google с помощью геоданных
 ----------------------------------------
 
 \index{Google!map}
 \index{Visualization!map}
 
-In this project, we are using the Google geocoding API to clean up some
-user-entered geographic locations of university names and then placing
-the data on a Google map.
+В данном проекте мы будем использовать Google API для ввода геоданных о некоторых универститетах и их 
+отображении на картах Google.
 
 ![A Google Map](../images/google-map)
 
-To get started, download the application from:
+Для начала, загрузим приложение по адресу:
 
 [www.py4e.com/code3/geodata.zip](http://www.py4e.com/code3/geodata.zip)
 
-The first problem to solve is that the free Google geocoding API is
-rate-limited to a certain number of requests per day. If you have a lot
-of data, you might need to stop and restart the lookup process several
-times. So we break the problem into two phases.
+Первое, на что надо обратить внимание - Google API ограничнивается всего лишь несколькими
+запросами в день. Если у вас много данных, вам придется останавливать и перезапускать
+процесс поиска несколько раз. Поэтому мы разобьем сам процесс на два этапа.
 
 \index{cache}
 

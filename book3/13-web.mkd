@@ -1,4 +1,4 @@
-Using Web Services
+Использование служб Web
 ==================
 
 Once it became easy to retrieve documents and parse documents over HTTP
@@ -17,8 +17,8 @@ information with each other, they use JavaScript Object Notation (JSON)
 eXtensible Markup Language - XML
 --------------------------------
 
-XML looks very similar to HTML, but XML is more structured than HTML.
-Here is a sample of an XML document:
+XML выглядит похожим на HTML, но XML является более структурированным, чем   HTML.
+Рассмотрим образец документа  XML:
 
 ~~~~ {.xml}
 <person>
@@ -30,39 +30,38 @@ Here is a sample of an XML document:
 </person>
 ~~~~
 
-Each pair of opening (e.g., `<person>`) and closing tags
-(e.g., `</person>`) represents a *element* or *node* with the same
-name as the tag (e.g., `person`). Each element can have some text,
-some attributes (e.g., `hide`), and other nested elements. If an XML
-element is empty (i.e., has no content), then it may be depicted by
-a self-closing tag (e.g., `<email />`).
+Каждая парп открывающихEach (`<person>`) и закрывающих тегов 
+(`</person>`) представляет собой  *элемент* или or *узел* с таким же 
+названием, как и тег (`person`). Каждый элемент может содержать текст, некторые 
+атрибуты (`hide`), и прочие вложенные элементы. Если элемент XML является пустым
+(т.е. не содержит данных), то он может быть представлен самозакрывающим тегом
+( `<email />`).
 
-Often it is helpful to think of an XML document as a tree structure
-where there is a top element (here: `person`), and other tags (e.g.,
-`phone`) are drawn as *children* of their *parent* elements.
+Часто, весьма полезным является представление документа XML в виде древовидной структуры,
+где верхний элемент (в нашем случае: `person`) и другие теги(`phone`) изображаются 
+как *дочерние* от своих  *родительских* элементов.
 
 ![A Tree Representation of XML](height=2.0in@../images/xml-tree)
 
-Parsing XML
+Парсинг XML
 -----------
 
 \index{ElementTree}
 \index{ElementTree!fromstring}
 \index{ElementTree!find}
 
-Here is a simple application that parses some XML and extracts some data
-elements from the XML:
+Приведем пример простого приложения, которое парсит XML и извлекает оттуда некоторые данные:
 
 \VerbatimInput{../code3/xml1.py} 
 
-The triple single quote (`'''`), as well as the triple double quote (`"""`), allow for the creation of strings that span multiple lines.
+Тройные одинарные (`'''`), так же как и двойные (`"""`) кавычки позволяют создавать строки, которые
+являются многострочными.
 
-Calling `fromstring` converts the string representation of
-the XML into a "tree" of XML elements. When the XML is in a tree,
-we have a series of methods we can call to extract portions
-of data from the XML string.  The `find` function searches
-through the XML tree and retrieves the element that matches
-the specified tag.
+Вызов  `fromstring` преобразует строковое представление XML в 
+"дерево" элементов XML. Когда XML организован в виде дерева, 
+существует ряд методов для извлечения порций данных.  
+Функция  `find` осуществляет поиск по дереву  XML и извлекает
+элемент, совпадающий с указанным тегом.
 
 ~~~~
 Name: Chuck

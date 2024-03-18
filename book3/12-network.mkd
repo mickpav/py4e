@@ -1,13 +1,12 @@
 Сетевые программы
 ==================
 
-While many of the examples in this book have focused on reading files
-and looking for data in those files, there are many different sources of 
-information when one considers the Internet.
+В то время, как множество примеров кода в этой книге были сфокусированы на чтении файлов
+и поиске в них информации, существует множество других источников для получения данных, 
+и один из них - Internet.
 
-In this chapter we will pretend to be a web browser and retrieve web
-pages using the Hypertext Transfer Protocol (HTTP). Then we will read
-through the web page data and parse it.
+В этой главе мы притворимся веб-браузером и получим веб страницы с помощью протокола передачи 
+гипертекста (HTTP). Затем мы получим данные с веб страницы и распарсим их.
 
 Протокол передачи гипертекста - HTTP
 -----------------------------------

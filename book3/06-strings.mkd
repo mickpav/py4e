@@ -71,7 +71,7 @@ TypeError: string indices must be integers
 \index{len function}
 \index{function!len}
 
-`len` является встроенной функцией, которая возвращает колчиество символов в строке:
+`len` является встроенной функцией, которая возвращает количество символов в строке:
 
 ~~~~ {.python}
 >>> fruit = 'banana'
@@ -186,7 +186,7 @@ Python
 ~~~~
 
 Если первый индекс больше, либо равен второму, результатом среза будет *пустая строка*, представленная 
-двумя кавычкамиs:
+двумя кавычками:
 
 \index{quotation mark}
 
@@ -223,19 +223,18 @@ Python
 TypeError: 'str' object does not support item assignment
 ~~~~
 
-The "object" in this case is the string and the "item" is the character
-you tried to assign. For now, an *object* is the same
-thing as a value, but we will refine that definition later. An
-*item* is one of the values in a sequence.
+"Object" в данном случае - строка и  "item"  - символ, который вы пытались
+присвоить. Сейчас *object* то же самое, что и значение, но мы позже уточним 
+это определение. *item*  - одно из значений в последовательности.
 
 \index{object}
 \index{item assignment}
 \index{assignment!item}
 \index{immutability}
 
-The reason for the error is that strings are *immutable*,
-which means you can't change an existing string. The best you can do is
-create a new string that is a variation on the original:
+Причиной данной ошибки является то, что строки *неизменяемые*,
+это значит, что нельзя изменить существующую строку. Самое лучшее, что можно сделать - 
+создать новую строку, которая будет вариантом оригинала:
 
 ~~~~ {.python}
 >>> greeting = 'Hello, world!'
@@ -244,12 +243,12 @@ create a new string that is a variation on the original:
 Jello, world!
 ~~~~
 
-This example concatenates a new first letter onto a slice of
-`greeting`. It has no effect on the original string.
+В данном примере происходид конкатенация новой первой буквы в срез `greeting`. 
+На иходную строку это не имеет никакого эффекта.
 
 \index{concatenation}
 
-Looping and counting
+Циклы и подсчет
 --------------------
 
 \index{counter}
@@ -257,8 +256,7 @@ Looping and counting
 \index{looping and counting}
 \index{looping!with strings}
 
-The following program counts the number of times the letter
-"a" appears in a string:
+Данная программа ситает сколлько раз буква "a" встречается в строке:
 
 ~~~~ {.python}
 word = 'banana'
@@ -269,18 +267,16 @@ for letter in word:
 print(count)
 ~~~~
 
-This program demonstrates another pattern of computation called a
-*counter*. The variable `count` is initialized
-to 0 and then incremented each time an "a" is found. When the
-loop exits, `count` contains the result: the total number of
-a's.
+В этой программе демонстрируется еще один паттерн программирования, который называется *счетчик*. 
+Переменной `count` присваивается значение 0, которое затем инкрементируется каждыф раз. как встречается буква  "a". 
+Когда цикл заканчивается, `count` содержит результат: общее количество букв 'a'.
 
 \index{encapsulation}
 
-**Exercise 3: Encapsulate this code in a function named `count`, and
-generalize it so that it accepts the string and the letter as arguments.**
+**Упражнение 3: Инкапсулируйте этот код в функцию  `count`, и обобщите ее так, чтобы 
+она принимала строку и и букву как аргументы.**
 
-The `in` operator
+Оператор `in`
 ----------------------------
 
 \index{in operator}
@@ -288,9 +284,8 @@ The `in` operator
 \index{boolean operator}
 \index{operator!boolean}
 
-The word `in` is a boolean operator that takes two strings
-and returns `True` if the first appears as a substring in the
-second:
+Слово `in`  - булевский оператор, который принимает на вход две строки и возвращает
+`True` если первая является подстрокой во второй:
 
 ~~~~ {.python}
 >>> 'a' in 'banana'
@@ -299,22 +294,20 @@ True
 False
 ~~~~
 
-String comparison
+Срванение строк
 -----------------
 
 \index{string!comparison}
 \index{comparison!string}
 
-The comparison operators work on strings. To see if two strings are
-equal:
+Оперторы сравнения работают и для строк. Чтобы понять, что две строки являются одинаковыми:
 
 ~~~~ {.python}
 if word == 'banana':
     print('All right, bananas.')
 ~~~~ 
 
-Other comparison operations are useful for putting words in alphabetical
-order:
+Другие операторы сравнения полезны для помещения слов в алфавитном порядке:
 
 ~~~~ {.python}
 if word < 'banana':
@@ -325,32 +318,27 @@ else:
     print('All right, bananas.')
 ~~~~
 
-Python does not handle uppercase and lowercase letters the same way that
-people do. All the uppercase letters come before all the lowercase
-letters, so:
+Python не воспринимает символы в вернем и нижнем регистре так, как это делает человек.
+Все символы в верхнем регистре идут первыми. Таким образом:
 
 ~~~~
 Your word, Pineapple, comes before banana.
 ~~~~
 
-A common way to address this problem is to convert strings to a standard
-format, such as all lowercase, before performing the comparison. Keep
-that in mind in case you have to defend yourself against a man armed
-with a Pineapple.
+Самый распространенный способ решения данной проблемы - проеобразвание строк к стандартному формату, например 
+в верхний регстр перед выполнением сравнения. Помните это, если вам придется защищаться от человека, вооруженного Ананасом
+(надо полагать, что это шутка юмора ~~~прим. пер.~~~~~).
 
-String methods
+Методы строк 
 ---------------------------
 
-Strings are an example of Python *objects*. An object
-contains both data (the actual string itself) and
-*methods*, which are effectively functions that are built
-into the object and are available to any *instance* of
-the object.
+Строки являются образцами *объектов* Python. Объект содержит 
+в себе как данные (сама по себе строка), так и *методы*, 
+которыми являются функции, встроенные в объект  и которые доступны для 
+любого  *экземпляра* объекта.
 
-Python has a function called `dir` which lists the methods
-available for an object. The `type` function shows the type
-of an object and the `dir` function shows the available
-methods.
+В Python имеется функция `dir`, которая выводит списк всех методов, доступных для объекта. 
+Функция `type` показывает тип объекта, функция `dir` показывает доступные методы.
 
 ~~~~ {.python}
 >>> stuff = 'Hello world'

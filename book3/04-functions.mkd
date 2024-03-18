@@ -94,7 +94,7 @@ ValueError: invalid literal for int() with base 10: 'Hello'
 -2
 ~~~~
 
-`float` преобразует целыен числа и строки в вещественные числа:
+`float` преобразует целые числа и строки в вещественные числа:
 
 \index{float function}
 \index{function!float}
@@ -266,7 +266,7 @@ for i in range(10):
 9
 ~~~~
 
-Для того, чтобы выбрать случайный элесент из существующего набора данных, вы можете использовать
+Для того, чтобы выбрать случайный элемент из существующего набора данных, вы можете использовать
 функцию `choice`:
 
 \index{choice function}
@@ -341,7 +341,7 @@ def print_lyrics():
 ...
 ~~~~
 
-Чтобы заврешить функцию вам необходимо ввести пустую строку (в режиме скрипта это делать не нужно)
+Чтобы завершить функцию, вам необходимо ввести пустую строку (в режиме скрипта это делать не нужно).
 
 Определение функции создает переменную с таким же именем.
 
@@ -366,7 +366,7 @@ I'm a lumberjack, and I'm okay.
 I sleep all night and I work all day.
 ~~~~
 
-После того, как выв создали определение своей функции, вы можете использовать ее 
+После того, как вы создали определение своей функции, вы можете использовать ее 
 из другой функции. Например, чтобы повторить предыдуший текст, мы можем создать следующую
 функцию под названием `repeat_lyrics`:
 
@@ -391,16 +391,15 @@ I sleep all night and I work all day.
 
 \index{function definition}
 
-Pulling together the code fragments from the previous section, the whole
-program looks like this:
+Если сбрать вместе фрагменты кода из пердыдущих разделов, 
+программа будет выглядеть следующим образом:
 
 \VerbatimInput{../code3/lyrics.py}
 
-This program contains two function definitions: `print_lyrics` and
-`repeat_lyrics`. Function definitions get executed just like other
-statements, but the effect is to create function objects. The statements
-inside the function do not get executed until the function is called,
-and the function definition generates no output.
+Данная програма содержит определения двух функций: `print_lyrics` и
+`repeat_lyrics`. Опеределения функций выполняются также, как и другие выражения,
+но результатом будет содание объектов функций. Выражения внутри функций не выполняются 
+ до тех пор, пока не происходит вызова функции и опеределение функции не производит вывода.
 
 \index{use before def}
 

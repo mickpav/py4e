@@ -18,12 +18,11 @@
 В последующих главах мы рассмотрели простые переменные, более сложные структуры, 
 такие как списки, кортежи и словари.
 
-As we build programs, we design data structures and write code
-to manipulate those data structures.   There are many ways to write programs
-and by now, you probably have written some programs that are "not so elegant"
-and other programs that are "more elegant". Even though your programs
-may be small, you are starting to see how there is a bit of art and
-aesthetic to writing code.
+При написании программ мы создаем структуры данных и пишем код для обработки этих структур.
+Существует много способов написания программ и к этому моменту вы, возможно, уже 
+написали их несколько, одни из них "не такие элегантные", а другие 
+"более элегантные". Даже несмотря на то, что они могут быть очень маленькими, 
+вы начинаете видеть некторое искусство и эстетику в нписании кода.
 
 As programs get to be millions of lines long, it becomes increasingly important
 to write code that is easy to understand.  If you are working on a million-line
@@ -38,8 +37,8 @@ while ignoring the other 999,950 lines of code for the moment.
 Итак, начнем
 ---------------
 
-Like many aspects of programming, it is necessary to learn the concepts of
-object oriented programming before you can use them effectively.
+Как и множество других аспектов программирования, необходимо изучить концепции 
+объектно-ориентированного программирования, прежде чем вы сможете эффективно их использовать.
 You should approach this chapter as a way to learn some terms and concepts and work
 through a few simple examples to lay a foundation for future learning.
 

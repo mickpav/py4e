@@ -1,4 +1,4 @@
-Conditional execution
+Условное выполнение 
 =====================
 
 Булевы выражения
@@ -65,8 +65,8 @@ x is not y           # x не такой же как y
 \index{logical operator}
 \index{operator!logical}
 
-Существует три *логичесих оператора*logical operators: `and`,
-`or`, and `not`. Их семантика (значение) сходна значению в английском языке.
+Существует три *логичесих оператора*: `and`,`or`, and `not`. 
+Их семантика (значение) сходна значению в английском языке.
 Например,
 
 `x > 0 and x < 10`
@@ -80,16 +80,16 @@ x is not y           # x не такой же как y
 \index{operator!or}
 \index{operator!not}
 
-`n%2 == 0 or n%3 == 0` is true if *either* of the conditions
-is true, that is, if the number is divisible by 2 *or* 3.
+`n%2 == 0 или n%3 == 0` будет истиной если *оба* условия
+являются истиной, то есть, число делится на 2 *или* 3.
 
-Finally, the `not` operator negates a boolean expression, so
+И, наконец, оператор `not`  negates a boolean expression, so
 `not (x > y)` is true if `x > y` is false; that
 is, if `x` is less than or equal to `y`.
 
-Strictly speaking, the operands of the logical operators should be
-boolean expressions, but Python is not very strict. Any nonzero number
-is interpreted as "true."
+Строго говоря, операнды логических операторов должны быть булевыми 
+выражениями, но  Python не столь строг. Любое ненулевое значение
+интерпертируется как "истина."
 
 ~~~~ {.python}
 >>> 17 and True
@@ -109,19 +109,19 @@ know what you are doing.
 \index{statement!if}
 \index{conditional executions}
 
-In order to write useful programs, we almost always need the ability to
-check conditions and change the behavior of the program accordingly.
-*Conditional statements* give us this ability. The
-simplest form is the `if` statement:
+Для того, чтобы программа была полезной, нам почти всегда нужна возможность
+проверки условий и соответственного изменения поведения программы.
+*Условные выражения* дают нам эту возможность.
+Самый простой вариант - это использование оператора `if`:
 
 ~~~~ {.python}
 if x > 0 :
     print('x is positive')
 ~~~~
 
-The boolean expression after the `if` statement is called the
-*condition*. We end the `if` statement with a
-colon character (:) and the line(s) after the if statement are indented.
+Булево выражение после `if` называется *условие*. 
+Условное выражение с `if` заканчивается двоеточием (:) и 
+строка или строки после оператора `if` печатаются с отступом.
 
 ![If Logic](height=1.5in@../images/if)
 
@@ -168,7 +168,8 @@ Small
 >>>
 ~~~~
 
-When using the Python interpreter, you must leave a blank line at the end of a block, otherwise Python will return an error:
+При использовании интерпретатора Python interpreterвы должны оставить пустую строку
+в конце блока, иначе будет возвращена ошибка:
 
 ~~~~ {.python}
 >>> x = 3
@@ -181,7 +182,8 @@ When using the Python interpreter, you must leave a blank line at the end of a b
 SyntaxError: invalid syntax
 ~~~~
 
-A blank line at the end of a block of statements is not necessary when writing and executing a script, but it may improve readability of your code.
+Пустая строка в конце блока выражений не является необходимой при написании и
+выполнении скрипта, но ее использование может улучшить читабельность  вашего кода.
 
 Альтернативное выполнение
 ---------------------
@@ -190,10 +192,8 @@ A blank line at the end of a block of statements is not necessary when writing a
 \index{else keyword}
 \index{keyword!else}
 
-A second form of the `if` statement is *alternative
-execution*, in which there are two possibilities and the
-condition determines which one gets executed. The syntax looks like
-this:
+Вторая форма оператора `if` -  *альтернативное выполнение*, когда существует два варианта и 
+условие оперделяет, какой из них должен выполниться. Ситаксис выглядит следующим образом:
 
 ~~~~ {.python}
 if x%2 == 0 :

@@ -707,38 +707,36 @@ wrong answer.
 Глоссарий
 --------
 
-assignment
+присваивание
 :   A statement that assigns a value to a variable.
 \index{assignment}
 
-concatenate
+конкатенация
 :   To join two operands end to end.
 \index{concatenation}
 
-comment
-:   Information in a program that is meant for other programmers (or
-    anyone reading the source code) and has no effect on the execution
-    of the program.
+комментарий
+:   Информация в программе, предназначенная  для других программистов (или
+    для всякого, кто будет просматривать исходный код) и не влияющая на исполнение программы.
 \index{comment}
 
 evaluate
 :   To simplify an expression by performing the operations in order to
     yield a single value.
 
-expression
-:   A combination of variables, operators, and values that represents a
-    single result value.
+выражение
+:   Сочетание переменных, операторов и значений которое предоставляет единое значение результата.
 \index{expression}
 
 floating point
 :   A type that represents numbers with fractional parts.
 \index{floating-point}
 
-integer
-:   A type that represents whole numbers.
+целый
+:   Тип данных предствляющий целые числа.
 \index{integer}
 
-keyword
+ключевое слово
 :   A reserved word that is used by the compiler to parse a program; you
     cannot use keywords like `if`, `def`, and
     `while` as variable names.
@@ -756,11 +754,11 @@ modulus operator
 \index{modulus operator}
 \index{operator!modulus}
 
-operand
+операнд
 :   One of the values on which an operator operates.
 \index{operand}
 
-operator
+оператор
 :   A special symbol that represents a simple computation like addition,
     multiplication, or string concatenation.
 \index{operator}
@@ -776,23 +774,23 @@ statement
     statements we have seen are assignments and print expression statement.
 \index{statement}
 
-string
-:   A type that represents sequences of characters.
+строка
+:   Тип данных, представлюящий собой последовательность символов.
 \index{string}
 
-type
+тип
 :   A category of values. The types we have seen so far are integers
     (type `int`), floating-point numbers (type
     `float`), and strings (type `str`).
 \index{type}
 
-value
+значение
 :   One of the basic units of data, like a number or string, that a
     program manipulates.
 \index{value}
 
-variable
-:   A name that refers to a value.
+переменная
+:   Имя, которое ссыялается на значение.
 \index{variable}
 
 Упражнения

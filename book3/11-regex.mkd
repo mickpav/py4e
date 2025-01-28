@@ -9,27 +9,22 @@
 \index{regex}
 \index{re module}
 
-This task of searching and extracting is so common that Python has a
-very powerful library called *regular expressions* that
-handles many of these tasks quite elegantly. The reason we have not
-introduced regular expressions earlier in the book is because while they
-are very powerful, they are a little complicated and their syntax takes
-some getting used to.
+Данная задача поиска и извлечения данных настолько широко применяется, что в Python на этот случай
+имеется мощная библиотека, которая выполняет множество из этих задача весьма элегантным способом. Причина, по которой мы ранее 
+не вводили регулярные выражения в данной книге заключается в том, что это весьма мощное средство, к использованию которого необходимо привыкнуть.
 
-Regular expressions are almost their own little programming language for
-searching and parsing strings. As a matter of fact, entire books have
-been written on the topic of regular expressions. In this chapter, we
-will only cover the basics of regular expressions. For more detail on
-regular expressions, see:
+Регулярные выражения по сути являются мини языком программирования для поиска и парсинга данных.
+Собственно говоря, по теме регулярных выражений написано множество книг.  В этой главе мы рассмотрим только основы регулярных выражений. 
+Для более подробной иноформации смотрите:
 
 <https://en.wikipedia.org/wiki/Regular_expression>
 
 <https://docs.python.org/library/re.html>
 
-The regular expression library `re` must be imported into
-your program before you can use it. The simplest use of the regular
-expression library is the `search()` function. The following
-program demonstrates a trivial use of the search function.
+Библиотека для использования регулярных выражений `re` должна быть 
+импортирована в вашу программу перед ее использованием.
+Самый простой способ использования это функция `search()`. 
+Приведенный ниже фрагмент кода демонстрирует ее применение.
 
 \index{regex!search}
 
